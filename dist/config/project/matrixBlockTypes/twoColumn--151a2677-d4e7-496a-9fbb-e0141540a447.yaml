@@ -1,0 +1,378 @@
+field: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+fieldLayouts:
+  9b155b8c-b124-44ee-af8d-76ee12d29ec2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b6630d0c-6345-4c8e-837c-b590dd259279 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16cdb2fb-88fe-4e60-a7ec-a06a993df6ac
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15b52808-f0bb-468e-9874-f480418af0f1 # Column One Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e6fd445-11ae-44c4-a0c7-75ed6a31b1cb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: af6413bd-320e-4496-9a22-11fc02d62957 # Column One Justify
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 93b87f4e-9179-47e8-bba6-680ed997da53
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fa888681-e2a8-4b13-bda5-4cdc7f57d27a # Column Two Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e95df852-4927-476b-8db3-e607b0af9455
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a572aea3-da9a-4ec6-9351-3af5f279fa6a # Column Two Justify
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae770471-eb66-4123-8947-f3477309732b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f933105f-a71f-4c1a-80f2-214b31a1685a
+        userCondition: null
+fields:
+  15b52808-f0bb-468e-9874-f480418af0f1: # Column One Content
+    columnSuffix: ywkdizfz
+    contentColumnType: text
+    fieldGroup: null
+    handle: columnOneContent
+    instructions: null
+    name: 'Column One Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  a572aea3-da9a-4ec6-9351-3af5f279fa6a: # Column Two Justify
+    columnSuffix: wwfdvhwk
+    contentColumnType: string
+    fieldGroup: null
+    handle: columnTwoJustify
+    instructions: null
+    name: 'Column Two Justify'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Start
+            -
+              - value
+              - start
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - End
+            -
+              - value
+              - end
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Between
+            -
+              - value
+              - between
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Around
+            -
+              - value
+              - around
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  af6413bd-320e-4496-9a22-11fc02d62957: # Column One Justify
+    columnSuffix: plwlzeel
+    contentColumnType: string
+    fieldGroup: null
+    handle: columnOneJustify
+    instructions: null
+    name: 'Column One Justify'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Start
+            -
+              - value
+              - start
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - End
+            -
+              - value
+              - end
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Between
+            -
+              - value
+              - between
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Around
+            -
+              - value
+              - around
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  b6630d0c-6345-4c8e-837c-b590dd259279: # Background Color
+    columnSuffix: bshowmqw
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: null
+    name: 'Background Color'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Yellow
+            -
+              - value
+              - yellow
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brick
+            -
+              - value
+              - brick
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - blue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Light Blue'
+            -
+              - value
+              - blue-light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Navy
+            -
+              - value
+              - navy
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Salmon
+            -
+              - value
+              - salmon
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Slate
+            -
+              - value
+              - slate
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brown
+            -
+              - value
+              - brown
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  fa888681-e2a8-4b13-bda5-4cdc7f57d27a: # Column Two Content
+    columnSuffix: qarhfzmd
+    contentColumnType: text
+    fieldGroup: null
+    handle: columnTwoContent
+    instructions: null
+    name: 'Column Two Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: twoColumn
+name: 'Two Column'
+sortOrder: 2

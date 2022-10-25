@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: faq
+name: FAQ
+propagationMethod: all
+siteSettings:
+  8d897e72-789e-48bd-b2c5-05e3dde851a7: # Council Of Entrepreneurs 
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: e50110b8-c0eb-45c2-b747-f3c3ad198586
+type: structure

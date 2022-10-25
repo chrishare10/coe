@@ -1,0 +1,203 @@
+
+<section class="section block bg-{{bgColor}}">
+    <div class=" accord-container  z-10 py-20 md:pt-40">
+        <div class="hidden lg:block bar-navigation">
+        {% set membershipOptions = craft.entries.section(accordionHandle).limit(accordionLimit)%}
+                
+            <ul class="accord-list" style="--total: {{membershipOptions|length}};">
+                {% for option in membershipOptions %}
+                <li class="accord-item bg-{{ bgColor }} py-20 md:pt-40 {% if loop.index == 1 %}accord-item-active{% endif %}" style="--i:{{ loop.index - 1}}; " tabindex="{{ loop.index }}">
+                <div class="flex flex-row w-full justify-between {% if loop.index == 1 %}pl-28{% else %}pl-20{% endif %} h-full">
+                    <div class=" flex flex-col justify-between">
+                        <div>
+                            {% if option.textArea01 is defined and option.textArea01 is not null %}
+                            <div>
+                                {% set colorSelect = "text-" ~ textColor %}
+                                {% set borderSelect = "border-" ~ textColor %}
+                                {% set bgSelect = "bg-" ~ textColor %}
+
+                                {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                                {% set h2Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                                {% set h3Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
+                                {% set h4Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                                {% set h5Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                                {% set pClasses = "font-sans text-xl mb-5 leading-tight " ~ colorSelect %}
+                                {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
+                                {% set strongClasses = " text-white" %}
+                                {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                                {% set imgClasses = "w-auto h-full object-contain" %}
+                                {% set figStyle = "max-height: 50%;" %}
+                            
+                                {{ option.textArea01 | retcon([
+                                    ['attr', 'h1', { class: h1Classes }],
+                                    ['attr', 'h2', { class: h2Classes }],
+                                    ['attr', 'h3', { class: h3Classes }],
+                                    ['attr', 'h4', { class: h4Classes }],
+                                    ['attr', 'h5', { class: h5Classes }],
+                                    ['attr', 'p', { class: pClasses }],
+                                    ['attr', 'li', { class: liClasses }],
+                                    ['attr', 'strong', { class: strongClasses }],
+                                    ['attr', 'a', { class: aClasses }],
+                                    ['attr', 'img', { class: imgClasses }],
+                                    ['attr', 'figure', { style: figStyle }],
+
+                                ]) }}
+
+                            </div>
+                            {% endif %}
+                            {% if option.text02 is not null or option.text03 is not null%}
+                            <div>
+                                <p class="text-base text-{{textColor}}">
+                                {% if option.text02 is not null %}
+                                {{ option.text02}}
+                                {% endif %}
+
+                                {% if option.text02 is not null and option.text03 is not null%}
+                                <span class="my-2">|</span>
+                                {% endif %}
+
+                                {% if option.text03 is not null %}
+                                {{ option.text03}}
+                                {% endif %}
+                                </p>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% if option.textArea02 is defined and option.textArea02 is not null %}
+                        <div>
+                             {{ option.textArea02 | retcon([
+                                    ['attr', 'h1', { class: h1Classes }],
+                                    ['attr', 'h2', { class: h2Classes }],
+                                    ['attr', 'h3', { class: h3Classes }],
+                                    ['attr', 'h4', { class: h4Classes }],
+                                    ['attr', 'h5', { class: h5Classes }],
+                                    ['attr', 'p', { class: pClasses }],
+                                    ['attr', 'li', { class: liClasses }],
+                                    ['attr', 'strong', { class: strongClasses }],
+                                    ['attr', 'a', { class: aClasses }],
+                                    ['attr', 'img', { class: imgClasses }],
+                                    ['attr', 'figure', { style: figStyle }],
+
+                                ]) }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="relative border-r-2 border-{{ textColor }} cursor-pointer">
+                        <h3 class="{{h3Classes}} transform rotate-90 origin-top-left {% if loop.index != 1 %}translate-x-40{% endif %} " {% if loop.index == 1 %}style="--tw-translate-x: 22rem;width:400px;"{% endif %}>{{ option.title }}</h3>
+                    </div>
+                </div>
+
+                </li>
+                
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+
+        <style>
+    .accordion-button:not(.collapsed) {
+        color:rgba(247, 206, 8,1);
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    </style>
+
+
+    <div class=" lg:hidden block h-screen">
+        <div class="border-r-2 {% if textColor is defined and textColor is not null %}border-{{textColor}}{% endif %} absolute h-full left-5 md:left-10 top-0"></div>
+
+        <div class="px-10 md:px-20  z-10 lg:h-screen py-20 md:pt-40">
+            <div class="accordion flex flex-col justify-around" id="accordionExample">
+                {% for option in membershipOptions %}
+                <div class="accordion-item ">
+                    <h2 class="accordion-header mb-0 border-0" id="panel{{ loop.index }}">
+                    <button class="accordion-button {% if loop.index != 1 %}collapsed{% endif %} relative flex items-center w-full pt-5  px-5 font-header text-4xl text-left md:text-5xl uppercase text-{{ textColor }} border-0 rounded-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}"
+                        aria-controls="collapse{{ loop.index }}" {% if loop.index == 1 %}aria-expanded="true"{% endif %}>
+                        {{ option.title }}
+                    </button>
+                    </h2>
+                    <div id="collapse{{ loop.index }}" class="accordion-collapse collapse border-0 {% if loop.index == 1 %}show{% endif %}" aria-labelledby="panel{{ loop.index }}"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body pt-4  px-5 pl-5 lg:pl-20 ">
+                        {% if option.textArea01 is defined and option.textArea01 is not null %}
+                        <div class="border-t-2 border-{{textColor}} pt-3">
+                            {% set colorSelect = "text-" ~ textColor %}
+                            {% set borderSelect = "border-" ~ textColor %}
+                            {% set bgSelect = "bg-" ~ textColor %}
+
+                            {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                            {% set h2Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                            {% set h3Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
+                            {% set h4Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                            {% set h5Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                            {% set pClasses = "font-sans text-xl mb-5 leading-tight " ~ colorSelect %}
+                            {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set strongClasses = " text-white" %}
+                            {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set imgClasses = "w-auto h-full object-contain" %}
+                            {% set figStyle = "max-height: 50%;" %}
+                        
+                            {{ option.textArea01 | retcon([
+                                ['attr', 'h1', { class: h1Classes }],
+                                ['attr', 'h2', { class: h2Classes }],
+                                ['attr', 'h3', { class: h3Classes }],
+                                ['attr', 'h4', { class: h4Classes }],
+                                ['attr', 'h5', { class: h5Classes }],
+                                ['attr', 'p', { class: pClasses }],
+                                ['attr', 'li', { class: liClasses }],
+                                ['attr', 'strong', { class: strongClasses }],
+                                ['attr', 'a', { class: aClasses }],
+                                ['attr', 'img', { class: imgClasses }],
+                                ['attr', 'figure', { style: figStyle }],
+
+                            ]) }}
+
+                        </div>
+                        {% endif %}
+                        {% if option.text02 is not null or option.text03 is not null%}
+                        <div>
+                            <p class="text-base text-{{textColor}}">
+                            {% if option.text02 is not null %}
+                            {{ option.text02}}
+                            {% endif %}
+
+                            {% if option.text02 is not null and option.text03 is not null%}
+                            <span class="my-2">|</span>
+                            {% endif %}
+
+                            {% if option.text03 is not null %}
+                            {{ option.text03}}
+                            {% endif %}
+                            </p>
+                        </div>
+                        {% endif %}
+                        {% if option.textArea02 is defined and option.textArea02 is not null %}
+                        <div>
+                             {{ option.textArea02 | retcon([
+                                    ['attr', 'h1', { class: h1Classes }],
+                                    ['attr', 'h2', { class: h2Classes }],
+                                    ['attr', 'h3', { class: h3Classes }],
+                                    ['attr', 'h4', { class: h4Classes }],
+                                    ['attr', 'h5', { class: h5Classes }],
+                                    ['attr', 'p', { class: pClasses }],
+                                    ['attr', 'li', { class: liClasses }],
+                                    ['attr', 'strong', { class: strongClasses }],
+                                    ['attr', 'a', { class: aClasses }],
+                                    ['attr', 'img', { class: imgClasses }],
+                                    ['attr', 'figure', { style: figStyle }],
+
+                                ]) }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    </div>
+                </div>
+                {% endfor %}
+        
+            </div>
+        </div>
+    </div>
+</section>

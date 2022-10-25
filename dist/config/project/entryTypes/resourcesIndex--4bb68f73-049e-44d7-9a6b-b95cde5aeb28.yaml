@@ -1,0 +1,85 @@
+fieldLayouts:
+  57629164-685b-4955-9b1d-5ecd9e3b2e1f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a21fbb3a-a15d-467d-9f8c-2dec66f3c278
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 86e4889d-b765-4f85-a3a8-0b9e6819c869 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c225ba38-a48b-4ccc-a8fe-61daca540aa4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1d5116d5-98bc-4a30-80ac-484f43321799 # Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30ae0790-4950-49ea-996b-796ec78ad3ae
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 805a8710-c210-4a93-9650-e66f9f120fe3
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc63a9e6-170f-4fc6-bb3c-187d22b9ca94
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: af7f66ff-1b26-4b94-853e-ded2b96f755d
+        userCondition: null
+handle: resourcesIndex
+hasTitleField: false
+name: 'Resources Index'
+section: 05caf56e-6e29-4324-bba9-d88a49bca39a # Resources Index
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

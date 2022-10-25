@@ -1,0 +1,91 @@
+fieldLayouts:
+  f847a6e8-cdd6-4efc-81ca-96242700d37b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 57d5e3c9-1e26-4a25-9bc0-2adeb3708efb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1a2d621f-8e1e-4863-a4c3-ac436d2564b3 # Text Area 01
+            instructions: null
+            label: Headline
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 51054462-c83c-43fa-8467-16554ea87be4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 743eae17-8138-4a52-a285-81351e9e460c # Text 02
+            instructions: null
+            label: 'Experience in years'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98c815dd-5140-416b-8dde-587e05d2b6f7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 474740f9-4bec-4813-b48f-0cac1d13a35f # Text 03
+            instructions: null
+            label: 'Minimum income'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 10249a9c-7c5f-44a6-82f6-b4f6a2acb29e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e0104155-7f9b-4923-a21a-fc95a242b97c # Text Area 02
+            instructions: null
+            label: 'Brief Description'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d54d90c-858c-450a-972d-a0dc0afbe4d7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cb76655c-5944-4b64-835c-46e812e572cc
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: d905c3cb-cc1a-4d7f-a8da-86602e84b476 # Membership Options
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

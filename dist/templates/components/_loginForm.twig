@@ -1,0 +1,46 @@
+
+
+<form method="post" accept-charset="UTF-8">
+    <div class="grid grid-cols-1 gap-4">
+    {{ csrfInput() }}
+    {{ actionInput('users/login') }}
+
+
+    {% set inputClasses = "w-full py-2 mt-1 bg-transparent border-b-2 text-" ~ textColor ~ " border-" ~ textColor  %}
+
+    
+    
+    
+
+
+    <div class="w-full col-span-1 ">   
+        {{ input('text', 'loginName', null, {
+            id: 'loginName',
+            class: inputClasses,
+            autocomplete: 'username'
+        }) }}
+        <label for="loginName" class="w-full font-sans text-base text-{{ textColor}} mb-5">Username</label>
+    </div>
+    <div class="w-full col-span-1 ">
+        {{ input('password', 'password', null, {
+            id: 'password',
+            class: inputClasses,
+        }) }}
+        <label for="password" class="w-full font-sans text-base text-{{ textColor}} mb-5">Password</label>
+    </div>
+    <div class="w-full col-span-1">
+    <label class="text-base text-{{ textColor }}">
+        {{ input('checkbox', 'rememberMe', '1') }}
+        Remember me
+    </label>
+    </div>
+    <div class="w-full mt-3 col-span-1 text-left">
+        <button class="btn-outline text-{{textColor}} border-2 border-{{ textColor }} bg-transparent hover:bg-{{ textColor }} hover:text-{{ bgColor }} cursor-pointer">Log In</button>
+    </div>
+    </div>
+    {% if errorMessage is defined %}
+        <p class="text-red mt-3">{{ errorMessage }}</p>
+    {% endif %}
+</form>
+
+<p class=" py-5 text-sm text-{{ textColor }}"><a href="{{ url('reset-password') }}">Forgot your password?</a></p>

@@ -1,0 +1,305 @@
+field: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+fieldLayouts:
+  a28ed2a4-9bfc-45e5-8ca4-74ff6dd9a4eb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 165f457f-00a2-4828-83c0-d1deb0caa78f # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3e29468-72a5-4682-b6a7-e0878ea9a2a0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 18c12b58-4153-4466-b5ed-32d8d6db84c5 # Column One Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e3df9d1-f2f8-4085-808c-0dab7adb3b6e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 421f440d-cc13-4027-bbb2-c1ba6969db41 # Column Two Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb7aa75b-0c06-4564-9708-192488ecaa5c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3ffe7dc2-1816-4a46-8a9d-99a74058ff86 # Column Three Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d0a9d51f-cfe8-4fb3-84c9-1158c99ce0b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ec36db1c-a265-4b72-be60-6fdd38ae90b5 # Arrangement
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d44d74c2-79c9-4c61-99ad-3845820f1576
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e6d4ae54-0540-4b28-9a6f-c76c641068d9
+        userCondition: null
+fields:
+  3ffe7dc2-1816-4a46-8a9d-99a74058ff86: # Column Three Content
+    columnSuffix: yyvcnaht
+    contentColumnType: text
+    fieldGroup: null
+    handle: columnThreeContent
+    instructions: null
+    name: 'Column Three Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  18c12b58-4153-4466-b5ed-32d8d6db84c5: # Column One Content
+    columnSuffix: heensvbq
+    contentColumnType: text
+    fieldGroup: null
+    handle: columnOneContent
+    instructions: null
+    name: 'Column One Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  165f457f-00a2-4828-83c0-d1deb0caa78f: # Background Color
+    columnSuffix: icgygzyy
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: null
+    name: 'Background Color'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Yellow
+            -
+              - value
+              - yellow
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brick
+            -
+              - value
+              - brick
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - blue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Light Blue'
+            -
+              - value
+              - blue-light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Navy
+            -
+              - value
+              - navy
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Salmon
+            -
+              - value
+              - salmon
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Slate
+            -
+              - value
+              - slate
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brown
+            -
+              - value
+              - brown
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  421f440d-cc13-4027-bbb2-c1ba6969db41: # Column Two Content
+    columnSuffix: szgopfbl
+    contentColumnType: text
+    fieldGroup: null
+    handle: columnTwoContent
+    instructions: null
+    name: 'Column Two Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  ec36db1c-a265-4b72-be60-6fdd38ae90b5: # Arrangement
+    columnSuffix: ifpgdmrs
+    contentColumnType: string
+    fieldGroup: null
+    handle: arrangement
+    instructions: null
+    name: Arrangement
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Cascade
+            -
+              - value
+              - cascade
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Start
+            -
+              - value
+              - start
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+handle: threeColumn
+name: 'Three Column'
+sortOrder: 3

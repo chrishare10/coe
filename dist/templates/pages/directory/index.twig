@@ -1,0 +1,15 @@
+{% requireLogin %}
+
+{% extends 'partials/_layout' %}
+{% block content %}
+   	
+
+	{% include "components/_headerMobile" %}
+
+	{% set props = {
+		components: entry.componentMatrix
+	}%}
+	{% include 'components/_componentMatrix' with props %}
+
+	
+{% endblock %}

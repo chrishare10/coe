@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: resourcesIndex
+name: 'Resources Index'
+propagationMethod: all
+siteSettings:
+  8d897e72-789e-48bd-b2c5-05e3dde851a7: # Council Of Entrepreneurs 
+    enabledByDefault: true
+    hasUrls: true
+    template: pages\resources\index.twig
+    uriFormat: resources
+type: single

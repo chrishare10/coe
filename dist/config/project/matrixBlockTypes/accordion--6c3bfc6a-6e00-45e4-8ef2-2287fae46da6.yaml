@@ -1,0 +1,242 @@
+field: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+fieldLayouts:
+  980ebaae-e9d9-42c6-801e-4b9876a2af38:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f67fb6b7-3035-4fbb-aa21-48d1056abec6 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b93bbbeb-e73f-4825-b276-3c27e73feedd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 25fd2c47-b005-4706-badd-1705a9fec496 # Column One Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc6084ba-70ae-4c8d-836a-3cddc027504f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 58e3ab4f-e64a-4a3b-99b7-8d5350236349 # Accordion Section Handle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4faed14-fbf5-4531-96a8-4a43eb783909
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 111df8ac-eac1-4760-935a-75f0733e86ad # Accordion Limit
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c27657aa-eab2-4ec1-853a-27f62f226dc5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ff4a1f0c-d52b-4dfc-8794-6bdd8e5274ce
+        userCondition: null
+fields:
+  25fd2c47-b005-4706-badd-1705a9fec496: # Column One Content
+    columnSuffix: ywrozjxf
+    contentColumnType: text
+    fieldGroup: null
+    handle: columnOneContent
+    instructions: null
+    name: 'Column One Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  58e3ab4f-e64a-4a3b-99b7-8d5350236349: # Accordion Section Handle
+    columnSuffix: rpcrlxpw
+    contentColumnType: text
+    fieldGroup: null
+    handle: accordionSectionHandle
+    instructions: null
+    name: 'Accordion Section Handle'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  111df8ac-eac1-4760-935a-75f0733e86ad: # Accordion Limit
+    columnSuffix: qprspnwv
+    contentColumnType: text
+    fieldGroup: null
+    handle: accordionLimit
+    instructions: null
+    name: 'Accordion Limit'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f67fb6b7-3035-4fbb-aa21-48d1056abec6: # Background Color
+    columnSuffix: ehlkfwus
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: null
+    name: 'Background Color'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Yellow
+            -
+              - value
+              - yellow
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brick
+            -
+              - value
+              - brick
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - blue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Light Blue'
+            -
+              - value
+              - lightBlue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Navy
+            -
+              - value
+              - navy
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Salmon
+            -
+              - value
+              - salmon
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Slate
+            -
+              - value
+              - slate
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brown
+            -
+              - value
+              - brown
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+handle: accordion
+name: Accordion
+sortOrder: 5

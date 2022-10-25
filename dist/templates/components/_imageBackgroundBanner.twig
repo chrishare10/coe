@@ -1,0 +1,51 @@
+<section class="section relative justify-end py-20 md:pt-28">
+
+    <div class="border-r-2 border-yellow absolute h-full left-5 md:left-10 top-0"></div>
+
+    {% if image is defined and image is not null %}
+    <img src="{{ image.getUrl("large")}}" style="z-index:-1;" class="absolute w-full h-full object-cover top-0">
+    {% endif %}
+    
+    <div class="px-10 md:px-20 flex flex-col md:flex-row z-10">
+        <div class="w-full md:w-2/3 lg:w-1/2">
+            
+            {% if text is defined and text is not null %}
+
+                    {% set colorSelect = "text-" ~ textColor %}
+                    {% set borderSelect = "border-" ~ textColor %}
+                    {% set bgSelect = "bg-" ~ textColor %}
+
+                    {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                    {% set h2Classes = "font-header text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl leading-none " ~ colorSelect %}
+                    {% set h3Classes = "font-header text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl leading-none " ~ colorSelect %}
+                    {% set h4Classes = "font-header text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl leading-none " ~ colorSelect %}
+                    {% set h5Classes = "font-header text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl leading-none " ~ colorSelect %}
+                    {% set pClasses = "font-sans text-xl mb-5 leading-tight " ~ colorSelect %}
+                    {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set strongClasses = "font-bold " ~ colorSelect %}
+                    {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                
+                    {{ text | retcon([
+                        ['attr', 'h1', { class: h1Classes }],
+                        ['attr', 'h2', { class: h2Classes }],
+                        ['attr', 'h3', { class: h3Classes }],
+                        ['attr', 'h4', { class: h4Classes }],
+                        ['attr', 'h5', { class: h5Classes }],
+                        ['attr', 'p', { class: pClasses }],
+                        ['attr', 'li', { class: liClasses }],
+                        ['attr', 'strong', { class: strongClasses }],
+                        ['attr', 'a', { class: aClasses }],
+
+                    ]) }}
+                
+            {% endif %}
+        </div>
+        <div class="w-full md:w-1/3 lg:w-1/2 flex flex-row md:justify-end md:items-end">
+        {% if videoEmbed is defined and videoEmbed is not null %}
+        <a href="#" class="inline-block">
+            <img src="{{ siteUrl }}assets/static/play-btn-clean.svg">
+        </a>
+        {% endif %}
+        </div>
+    </div>
+</section>

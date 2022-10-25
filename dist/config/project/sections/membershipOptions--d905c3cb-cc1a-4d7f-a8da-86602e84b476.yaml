@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: membershipOptions
+name: 'Membership Options'
+propagationMethod: all
+siteSettings:
+  8d897e72-789e-48bd-b2c5-05e3dde851a7: # Council Of Entrepreneurs 
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: c4060ba0-a814-4c1a-92ae-df1d4618ae60
+type: structure

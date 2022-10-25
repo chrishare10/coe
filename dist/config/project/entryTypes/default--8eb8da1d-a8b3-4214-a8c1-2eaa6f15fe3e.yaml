@@ -1,0 +1,79 @@
+fieldLayouts:
+  217952e6-4953-4321-85f2-c86aa93aee43:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 39f5ea33-8aea-43ed-9bbf-7b7f48f4e0d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5c647c1e-7c7b-448f-bea9-6ef32f1bc81d # News Resources Picker
+            instructions: null
+            label: Category
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c20c579-9cce-40d6-b98c-23c1d5d67385
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a076b444-4e5a-47e2-bd5c-efdb85859d60 # Image 01
+            instructions: null
+            label: 'Featured Image'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 37ecf7f8-ce97-4aef-a369-d598062d1291
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1a2d621f-8e1e-4863-a4c3-ac436d2564b3 # Text Area 01
+            instructions: null
+            label: Content
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 29378b1e-e3a0-48ad-b01b-bc3b7e9a083a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 38e882f1-d6cb-4ac4-85d3-34345ba07e1d
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 4463df02-9e95-4918-bba3-38471dbd5a94 # Resources
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

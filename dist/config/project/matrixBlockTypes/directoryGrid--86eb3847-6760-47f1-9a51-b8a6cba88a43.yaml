@@ -1,0 +1,170 @@
+field: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+fieldLayouts:
+  04356cc3-0ba9-44c2-b3c5-2c9b5eb068a2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2129d3a8-e9b5-4e10-ad0f-ac48feeb5b9b # Member Limit
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7a4a39b-a323-453a-990e-68101d9e6a60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 423c4c7c-b16b-4a09-a36b-0f414a1588de # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4144366-3546-4605-90ab-350ad841c7ae
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ee7e1331-ffb5-4a9c-80fb-5142026027b8
+        userCondition: null
+fields:
+  423c4c7c-b16b-4a09-a36b-0f414a1588de: # Background Color
+    columnSuffix: xtcfgbfb
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: null
+    name: 'Background Color'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Yellow
+            -
+              - value
+              - yellow
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brick
+            -
+              - value
+              - brick
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - blue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Light Blue'
+            -
+              - value
+              - blue-light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Navy
+            -
+              - value
+              - navy
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Slate
+            -
+              - value
+              - slate
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Salmon
+            -
+              - value
+              - salmon
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brown
+            -
+              - value
+              - brown
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  2129d3a8-e9b5-4e10-ad0f-ac48feeb5b9b: # Member Limit
+    columnSuffix: diiutfbq
+    contentColumnType: text
+    fieldGroup: null
+    handle: memberLimit
+    instructions: null
+    name: 'Member Limit'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: directoryGrid
+name: 'Directory Grid'
+sortOrder: 11

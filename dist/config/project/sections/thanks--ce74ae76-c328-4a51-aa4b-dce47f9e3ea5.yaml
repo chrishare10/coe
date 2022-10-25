@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: thanks
+name: Thanks
+propagationMethod: all
+siteSettings:
+  8d897e72-789e-48bd-b2c5-05e3dde851a7: # Council Of Entrepreneurs 
+    enabledByDefault: true
+    hasUrls: true
+    template: pages\contact\thanks.twig
+    uriFormat: contact/thanks
+type: single

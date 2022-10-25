@@ -1,0 +1,78 @@
+{% extends 'partials/_layout' %}
+{% block content %}
+
+    
+    <div id="fullpage">
+    {% include "components/_headerMobile" %}
+
+        <section class="section bg-salmon">
+            <div class="border-r-2 border-navy absolute h-full left-5 md:left-10 top-0"></div>
+
+            <div class="px-10 md:px-20 z-10 py-20 pt-40">
+
+                <div class="flex flex-col h-full mx-auto max-w-6xl mb-10">
+                    {% if entry.categoryPicker.one() is defined and entry.categoryPicker.one() is not null %}
+                    <div>
+                        <p class="font-sans text-2xl  leading-relaxed text-navy">{{ entry.categoryPicker.one() }}</p>
+                    </div>
+                    {% endif %}
+                    <div>
+                        <h1 class="font-header text-6xl md:text-7xl leading-none uppercase mb-5 text-navy">{{ entry.title }}</h1>
+                    </div>
+
+                    {% if entry.image01.one() is defined and entry.image01.one() is not null %}
+                    <div class="entry-img w-full relative">
+                        <img class="w-full h-full object-cover absolute" src="{{ entry.image01.one().getUrl("large") }}">
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-5 lg:gap-10 h-full mx-auto max-w-6xl">
+                    <div class="w-full flex flex-col ">
+                        {% if entry.textArea01 is defined and entry.textArea01 is not null %}
+                        
+                            
+
+                            {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 text-navy" %}
+                            {% set h2Classes = "font-header text-5xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 text-navy" %}
+                            {% set h3Classes = "font-sans text-xl md:text-2xl lg:text-3xl leading-none mb-5 text-navy" %}
+                            {% set h4Classes = "font-sans text-lg md:text-2xl leading-none mb-5 text-navy"%}
+                            {% set h5Classes = "font-sans text-md md:text-xl leading-none mb-5 text-navy" %}
+                            {% set pClasses = "font-sans text-xl mb-5 leading-relaxed text-navy" %}
+                            {% set liClasses = "mb-7 border-t pl-10 pt-5 text-navy border-navy" %}
+                            {% set strongClasses = "font-bold text-navy" %}
+                            {% set aClasses = "underline"%}
+                            {% set imgClasses = "w-auto h-full object-contain" %}
+                            {% set figStyle = "max-height: 100%;margin-bottom:1.25rem;" %}
+                        
+                            {{ entry.textArea01 | retcon([
+                                ['attr', 'h1', { class: h1Classes }],
+                                ['attr', 'h2', { class: h2Classes }],
+                                ['attr', 'h3', { class: h3Classes }],
+                                ['attr', 'h4', { class: h4Classes }],
+                                ['attr', 'h5', { class: h5Classes }],
+                                ['attr', 'p', { class: pClasses }],
+                                ['attr', 'li', { class: liClasses }],
+                                ['attr', 'strong', { class: strongClasses }],
+                                ['attr', 'a', { class: aClasses }],
+                                ['attr', 'img', { class: imgClasses }],
+                                ['attr', 'figure', { style: figStyle }],
+
+                            ]) }}
+
+                        
+                        {% endif %}
+                    </div>
+                    
+                    
+                </div>
+                
+
+                {% include 'components/_footer' %}
+
+                
+            </div>
+
+        </section>
+    </div>
+{% endblock %}

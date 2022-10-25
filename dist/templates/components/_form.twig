@@ -1,0 +1,93 @@
+{% set form = craft.expressforms.form(formLabel) %}
+
+{# Flash Success #}
+{% if form.submittedSuccessfully %}
+   <div class="success">
+        {{ "Form has been submitted successfully!"|t }}
+   </div>
+{% endif %}
+
+{# General Error Handling #}
+{% if not form.valid %}
+    <div class="errors">
+        {{ "Error! Please review the form and try submitting again."|t }}
+        {% if form.errors|length %}
+            <ul>
+                {% for error in form.errors %}
+                    <li>{{ error|t }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endif %}
+
+{# Automatically set Form tags with Return, CSRF and Honeypot (if enabled) #}
+{{ form.openTag({ return: 'contact/thanks' }) }}
+
+{# Automation of Field Rendering #}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+{% for field in form.fields %}
+    {% if field.type == "hidden" %}
+    <input id="{{ field.handle }}" type="hidden" name="{{ field.handle }}" value="{{ field.value }}">
+    {% elseif field.type == "textarea" %}
+        <div class="w-full col-span-1 md:col-span-2 mt-5">
+            <label for="{{ field.handle }}" class="w-full font-sans text-base text-{{textColor}} mb-5 l {{ field.isRequired ? 'required' }}">{{ field.label }}</label>
+            <textarea class="w-full p-2  mb-3 mt-3 bg-{{bgColor}} text-{{textColor}} border-2 border-{{ textColor }}"  rows="5" cols="40" id="{{ field.handle }}" name="{{ field.handle }}">
+                {{- field.value -}}
+            </textarea>
+            {% if field.errors %}
+                <ul class="errors">
+                    {% for error in field.errors %}
+                        <li>{{ error|t }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% elseif field.type == "file" %}
+        <p>
+            <label for="{{ field.handle }}"{{ field.isRequired ? ' class="required"' }}>{{ field.label }}</label>
+            <input type="{{ field.type }}" name="{{ field.handle }}[]" multiple>
+            {% if field.errors %}
+                <ul class="errors">
+                    {% for error in field.errors %}
+                        <li>{{ error|t }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </p>
+    {% elseif field.type == "checkbox" %}
+        <p>
+            <label{{ field.isRequired ? ' class="required"' }}>
+                <input type="checkbox" name="{{ field.handle }}" value="1"{{ "1" in field.value ? " checked" }}>
+                {{ field.label }}
+            </label>
+            {% if field.errors %}
+                <ul class="errors">
+                    {% for error in field.errors %}
+                        <li>{{ error|t }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </p>
+    {% else %}
+       
+        <div class="w-full col-span-1 ">
+            
+            <input id="{{ field.handle }}" class="w-full py-2 mt-1 bg-transparent text-{{ textColor}} border-b-2 border-{{ textColor }}"  type="{{ field.type }}" name="{{ field.handle }}" value="{{ field.value }}">
+            {% if field.errors %}
+                <ul class="errors">
+                {% for error in field.errors %}
+                    <li>{{ error|t }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            <label for="{{ field.handle }}" class="w-full font-sans text-base text-{{ textColor}} mb-5  {{ field.isRequired ? 'required' }}">{{ field.label }}</label>
+        </div>
+        
+    {% endif %}
+{% endfor %}
+<div class="w-full mt-3 col-span-1 md:col-span-2 text-left">
+<input type="submit" value="{% if entry.title == "Resources"%}Sign Up{% else %}Submit{% endif %}" class="btn-outline text-{{textColor}} border-2 border-{{ textColor }} bg-transparent hover:bg-{{ textColor }} hover:text-{{ bgColor }} cursor-pointer">
+</div>
+</div>
+{{ form.closeTag }}

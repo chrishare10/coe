@@ -1,0 +1,76 @@
+{% extends 'partials/_layout' %}
+{% block content %}
+
+    
+
+	{% include "components/_headerMobile" %}
+
+    {% if entry.text01 is defined and entry.text01 is not null %}
+        {% if entry.text01 == "yellow" %}
+            {% set textColor = "brick" %}
+        {% elseif entry.text01 == "red" %}
+            {% set textColor = "slate" %}
+        {% elseif entry.text01 == "salmon" %}
+            {% set textColor = "navy" %}
+        {% elseif entry.text01 == "navy" %}
+            {% set textColor = "blue-light" %}
+        {% elseif entry.text01 == "brick" %}
+            {% set textColor = "yellow" %}
+        {% elseif entry.text01 == "blue" %}
+            {% set textColor = "yellow" %}
+        {% elseif entry.text01 == "brown" %}
+            {% set textColor = "slate" %}
+        {% elseif entry.text01 == "blue-light" %}
+            {% set textColor = "navy" %}
+        {% elseif entry.text01 == "slate" %}
+            {% set textColor = "red" %}
+        {% endif %}
+    {% endif %}
+
+   
+    <section class="{% if entry.text01 %}bg-{{entry.text01}}{% else %}bg-navy{% endif %} h-screen">
+        <div clas="container mx-auto px-4 ">
+            <div class="flex flex-col md:flex-row justify-around items-center py-40">
+                <div class="text-center w-full md:w-2/3">
+                    {% if entry.textArea01 is defined and entry.textArea01 is not null %}
+                
+                    {% set colorSelect = "text-" ~ textColor %}
+                    {% set borderSelect = "border-" ~ textColor %}
+                    {% set bgSelect = "bg-" ~ textColor %}
+
+                    {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                    {% set h2Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
+                    {% set h3Classes = "font-sans text-xl md:text-2xl lg:text-3xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h4Classes = "font-sans text-lg md:text-xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h5Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                    {% set pClasses = "font-sans text-xl mb-5 leading-tight " ~ colorSelect %}
+                    {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set strongClasses = "font-bold " ~ colorSelect %}
+                    {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set imgClasses = "w-auto h-full object-contain" %}
+                    {% set figStyle = "max-height: 100%;" %}
+                
+                    {{ entry.textArea01| retcon([
+                        ['attr', 'h1', { class: h1Classes }],
+                        ['attr', 'h2', { class: h2Classes }],
+                        ['attr', 'h3', { class: h3Classes }],
+                        ['attr', 'h4', { class: h4Classes }],
+                        ['attr', 'h5', { class: h5Classes }],
+                        ['attr', 'p', { class: pClasses }],
+                        ['attr', 'li', { class: liClasses }],
+                        ['attr', 'strong', { class: strongClasses }],
+                        ['attr', 'a', { class: aClasses }],
+                        ['attr', 'img', { class: imgClasses }],
+                        ['attr', 'figure', { style: figStyle }],
+
+                    ]) }}
+
+                
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+{% endblock %}

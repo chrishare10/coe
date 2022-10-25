@@ -1,0 +1,38 @@
+<section class="section bg-{{ bgColor }}">
+    <div class="border-r-2 {% if textColor is defined and textColor is not null %}border-{{textColor}}{% endif %} absolute h-1/2 left-5 md:left-10 top-0"></div>
+    <div class="hidden lg:block border-r-2 {% if textColor is defined and textColor is not null %}border-{{textColor}}{% endif %} absolute h-4/5 left-1/2 top-0"></div>
+
+    <div class="px-10 md:px-20  z-10 lg:h-screen lg:py-20 pt-40">
+        <div class="flex flex-col lg:flex-row gap-10 lg:h-5/6">
+            <div class="w-full lg:w-1/2 flex flex-col justify-center">
+
+                <div class="lg:w-2/3">
+
+                {% if formHeadline is defined and formHeadline is not null %}
+                    <h2 class="font-header text-5xl lg:text-6xl leading-none uppercase mb-5 text-{{ textColor }}">{{ formHeadline }}</h2>
+                {% endif %}
+
+                {% include 'components/_loginForm' with props %}
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-1/2 flex flex-col overflow-hidden justify-end">
+                
+                    
+                {% if image is defined and image is not null %}
+                <figure style="max-height:100%;">
+                    <img src="{{ image.getUrl("medium") }}" class="w-auto h-full object-contain">
+
+                </figure>
+                {% endif %}
+                
+            </div>
+        </div>
+        
+
+        {% include 'components/_footer' %}
+
+        
+    </div>
+
+</section>

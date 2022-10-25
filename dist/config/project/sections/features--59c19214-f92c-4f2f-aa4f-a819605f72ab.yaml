@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: features
+name: Features
+propagationMethod: all
+siteSettings:
+  8d897e72-789e-48bd-b2c5-05e3dde851a7: # Council Of Entrepreneurs 
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: af2d7293-cc02-43b9-a221-8340b64a5299
+type: structure

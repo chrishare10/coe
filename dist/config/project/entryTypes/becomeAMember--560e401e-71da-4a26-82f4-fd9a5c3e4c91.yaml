@@ -1,0 +1,85 @@
+fieldLayouts:
+  b6479ae7-7bef-4672-9002-d9996e933904:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e58f69b6-3cf7-4c93-9145-7d776a1a8e97
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 86e4889d-b765-4f85-a3a8-0b9e6819c869 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31fe7aab-a5bd-472c-b4a5-b5b571656a5f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1d5116d5-98bc-4a30-80ac-484f43321799 # Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: abefaad8-9f0f-447a-8f1b-80f695e96823
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 34a16fe7-2fd6-4c08-b595-a7c7dfc600b2
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 999cc3ac-80e6-4a27-a7ca-94f08e3e4058
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c77c6983-f147-4378-94cc-50eed4ae9b95
+        userCondition: null
+handle: becomeAMember
+hasTitleField: false
+name: 'Become A Member'
+section: 35e70e3a-a9b7-4a6c-9a0c-4fbb0e8269bc # Become A Member
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

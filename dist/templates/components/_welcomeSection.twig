@@ -1,0 +1,53 @@
+<section class="section bg-{{ bgColor }}">
+    <div class="border-r-2 {% if textColor is defined and textColor is not null %}border-{{textColor}}{% endif %} absolute h-full left-5 md:left-10 top-0"></div>
+
+    <div class="px-10 md:px-20  z-10 md:h-screen py-20 pt-40">
+        <div class="flex flex-col md:flex-row gap-10 {% if loop.index == components|length %}md:h-4/5{% else %}h-full{% endif %}">
+            <div class=" w-full md:w-1/2 flex flex-col  {% if entry.title != "Resources Index" and entry.title != "Become A Member" %}md:border-r-2 border-{{textColor}}{% endif %}">
+                <div class="mb-10">
+                    <p class="font-sans text-xl leading-tight text-{{ textColor }}">Welcome back,</p>
+                    <h3 class="font-header uppercase text-5xl md:text-6xl lg:text-7xl leading-none text-{{ textColor }}">{{ currentUser.fullName }}</h3>
+                </div>
+                {% if currentUser.image01.one() is defined and currentUser.image01.one() is not null %}
+
+                <div class="pr-10">
+                    <img class="max-w-xl w-full" src="{{ currentUser.image01.one().getUrl("medium")}}">
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="w-full md:w-1/2 flex flex-col overflow-hidden {% if colTwoJustify is defined and colTwoJustify is not null %}justify-{{colTwoJustify}}{% endif %}">
+                
+                <div class="mb-10">
+                    <h3 class="font-header uppercase text-4xl md:text-5xl lg:text-6xl leading-none text-{{ textColor }}">New Members</h3>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+                    {% set newUsers = craft.users().orderBy('dateCreated DESC').limit(6)%}
+                    {% for user in newUsers %}
+                    <div class="col-span-1">
+                        {% if user.image01.one() is defined and user.image01.one() is not null %}
+                        <div class="w-40 h-40 mb-3">
+                            <img class="w-full h-full object-cover " src="{{ user.image01.one().getUrl("small") }}">
+                        </div>
+                        {% endif %}
+
+                        <p class="font-sans text-2xl leading-tight text-{{ textColor }}">{{user.fullName}}</p>
+                    </div>
+                    {% endfor %}
+
+                    <div class="col-span-1 md:col-span-3">
+                        <a href="{{ siteUrl }}directory" class="btn-outline text-{{ textColor }} border-2 border-{{ textColor }} hover:text-{{ bgColor }} hover:bg-{{ textColor }}">
+                        View Directory
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if loop.index == components|length %}
+
+        {% include 'components/_footer' %}
+
+        {% endif %}
+    </div>
+
+</section>

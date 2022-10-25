@@ -1,0 +1,48 @@
+fieldLayouts:
+  57b54ceb-b0bd-4f32-9a7f-3177c6c10884:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a076b444-4e5a-47e2-bd5c-efdb85859d60 # Image 01
+            instructions: null
+            label: Color
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90a218da-c5a7-404c-ad09-e0e42924f356
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3260011f-bdee-42cb-86f6-e171cd7d65de # Image 02
+            instructions: null
+            label: White
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1087ad89-7feb-4968-8559-af6bd95f1380
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2ae7a77d-d166-4535-befb-8ad152d07463 # Image 03
+            instructions: null
+            label: Alt
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c546667f-b05d-4209-9184-95bd5559a84d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Logos
+        uid: 7e31f9ec-10ec-4f7c-b301-1e1e6f074e80
+        userCondition: null
+handle: brandAssets
+name: 'Brand Assets'
+sortOrder: 1

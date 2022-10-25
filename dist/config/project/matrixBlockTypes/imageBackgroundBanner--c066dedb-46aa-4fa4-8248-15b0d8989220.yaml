@@ -1,0 +1,270 @@
+field: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+fieldLayouts:
+  1c3a0ea3-9552-419f-b9af-8520a4e6b780:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d2962e90-4c96-43f6-af5d-a6b43dd97068 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2ff96eb2-0342-429d-953f-2852b6346aea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6b55a1e7-f2b0-4424-b10a-76565e7bd24d # Main Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e22e3bfe-fdca-4515-8dc2-cd5557d40705
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3fa375bd-b50a-4c3c-b1e5-6e7e36fa7f6e # Video Embed
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a5740ce8-41e7-40cf-a8e0-7f639e35b20b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1b60fe2e-d7f5-4aa1-959d-3ffb2bd2536b # Text Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e2c6954-6b67-4244-84c4-c2250b5afec8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0e8a0c8a-dfb7-4322-b143-2808c2f89643
+        userCondition: null
+fields:
+  1b60fe2e-d7f5-4aa1-959d-3ffb2bd2536b: # Text Color
+    columnSuffix: zhfxifmq
+    contentColumnType: string
+    fieldGroup: null
+    handle: textColor
+    instructions: null
+    name: 'Text Color'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Yellow
+            -
+              - value
+              - yellow
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brick
+            -
+              - value
+              - brick
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - blue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Light Blue'
+            -
+              - value
+              - blue-light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Navy
+            -
+              - value
+              - navy
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Salmon
+            -
+              - value
+              - salmon
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Slate
+            -
+              - value
+              - slate
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Brown
+            -
+              - value
+              - brown
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  3fa375bd-b50a-4c3c-b1e5-6e7e36fa7f6e: # Video Embed
+    columnSuffix: mjvalrmd
+    contentColumnType: text
+    fieldGroup: null
+    handle: videoEmbed
+    instructions: null
+    name: 'Video Embed'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6b55a1e7-f2b0-4424-b10a-76565e7bd24d: # Main Content
+    columnSuffix: plgtqyef
+    contentColumnType: text
+    fieldGroup: null
+    handle: mainContent
+    instructions: null
+    name: 'Main Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  d2962e90-4c96-43f6-af5d-a6b43dd97068: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:388bf0b3-fa55-4ea9-9126-42ea7f433638' # Static
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:388bf0b3-fa55-4ea9-9126-42ea7f433638' # Static
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: imageBackgroundBanner
+name: 'Image Background Banner'
+sortOrder: 1

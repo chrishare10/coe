@@ -1,0 +1,46 @@
+defaultPlacement: end
+fieldLayouts:
+  e6785b48-f0dd-43e2-8280-728f3ae9edae:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 9652bd9c-1bc1-4165-b062-c70d240549dc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ebaf06c6-0e98-4985-ba62-c808fe143ed5
+        userCondition: null
+handle: memberIndustry
+name: 'Member Industry'
+siteSettings:
+  8d897e72-789e-48bd-b2c5-05e3dde851a7: # Council Of Entrepreneurs 
+    hasUrls: true
+    template: null
+    uriFormat: 'member-industry/{slug}'
+structure:
+  maxLevels: null
+  uid: 2c70fffa-ba5c-4cc3-882b-3d7b51602ed1

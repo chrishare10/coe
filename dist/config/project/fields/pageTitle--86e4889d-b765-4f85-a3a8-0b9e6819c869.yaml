@@ -1,0 +1,19 @@
+columnSuffix: wnqjroru
+contentColumnType: text
+fieldGroup: f6c2f0c0-74bb-436e-9d7c-e16ed8d3da06 # SEO
+handle: pageTitle
+instructions: null
+name: 'Page Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

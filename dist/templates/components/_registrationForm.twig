@@ -1,0 +1,77 @@
+{% macro errorList(errors) %}
+  {% if errors %}
+    {{ ul(errors, {class: 'errors'}) }}
+  {% endif %}
+{% endmacro %}
+
+{# `user` is defined if the form returns validation errors. #}
+{% set user = user ?? null %}
+
+<form method="post" accept-charset="UTF-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {{ csrfInput() }}
+    {{ actionInput('users/login') }}
+    {{ redirectInput('') }}
+
+    {% set inputClasses = "w-full py-2 mt-1 bg-transparent border-b-2 text-" ~ textColor ~ " border-" ~ textColor  %}
+
+    <div class="w-full col-span-1 ">
+        
+        {{ input('text', 'username', user.username ?? null, {
+            id: 'username',
+            class: inputClasses,
+            autocomplete: 'username',
+        }) }}
+        {{ user ? _self.errorList(user.getErrors('username')) }}
+        <label for="username" class="w-full font-sans text-base text-{{ textColor}} mb-5">Username</label>
+    </div>
+
+    <div class="w-full col-span-1 ">
+        
+        {{ input('text', 'firstName', user.firstName ?? null, {
+            id: 'firstName',
+            class: inputClasses,
+            autocomplete: 'given-name',
+        }) }}
+        {{ user ? _self.errorList(user.getErrors('firstName')) }}
+        <label for="firstName" class="w-full font-sans text-base text-{{ textColor}} mb-5">First Name</label>
+    </div>
+
+    <div class="w-full col-span-1 ">
+        
+        {{ input('text', 'lastName', user.lastName ?? null, {
+            id: 'lastName',
+            class: inputClasses,
+            autocomplete: 'family-name',
+        }) }}
+        {{ user ? _self.errorList(user.getErrors('lastName')) }}
+        <label for="lastName" class="w-full font-sans text-base text-{{ textColor}} mb-5">Last Name</label>
+    </div>
+
+    <div class="w-full col-span-1 ">
+       
+        {{ input('email', 'email', user.email ?? null, {
+            id: 'email',
+            class: inputClasses,
+            autocomplete: 'email',
+        }) }}
+        {{ user ? _self.errorList(user.getErrors('email')) }}
+        <label for="email" class="w-full font-sans text-base text-{{ textColor}} mb-5">Email</label>
+    </div>
+
+    <div class="w-full col-span-1 ">
+        
+        {{ input('password', 'password', null, {
+            id: 'password',
+            class: inputClasses,
+        }) }}
+        {{ user ? _self.errorList(user.getErrors('password')) }}
+        <label for="password" class="w-full font-sans text-base text-{{ textColor}} mb-5">Password</label>
+    </div>
+    
+    
+    <div class="w-full mt-3 col-span-1 md:col-span-2 text-left">
+        <input type="submit" value="Submit" class="btn-outline text-{{textColor}} border-2 border-{{ textColor }} bg-transparent hover:bg-{{ textColor }} hover:text-{{ bgColor }} cursor-pointer">
+    </div>
+    </div>
+</form>

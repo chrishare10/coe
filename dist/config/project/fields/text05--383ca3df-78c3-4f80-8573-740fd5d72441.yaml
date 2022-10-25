@@ -1,0 +1,19 @@
+columnSuffix: renqkfef
+contentColumnType: text
+fieldGroup: 343c118a-3a3b-450d-bad7-d715943511f0 # Common
+handle: text05
+instructions: null
+name: 'Text 05'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,85 @@
+fieldLayouts:
+  ef0f0131-1f9a-42cd-985d-6a79b77d4b92:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ba44bb8b-928f-4634-8359-c2017d9ce289
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 86e4889d-b765-4f85-a3a8-0b9e6819c869 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2bffa92d-b26c-4620-ac85-eb026a3a371a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1d5116d5-98bc-4a30-80ac-484f43321799 # Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05706c30-41a0-4acc-bf01-485a122f22e7
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 323ab4e2-f525-470e-bd3a-69f245ea7072
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: fd6312bb-8493-408e-86e7-900dda8fcd3e # Component Matrix
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 123b4238-bc6e-4aee-94c0-bcc96f443fd5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 38fc88b8-4b1a-41d7-a233-77eb4c05e49e
+        userCondition: null
+handle: dashboard
+hasTitleField: false
+name: Dashboard
+section: ff5ac457-626c-46b7-a45f-9dec3edd917d # Dashboard
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

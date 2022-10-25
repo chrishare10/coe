@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+
+		{% if entry is defined %}
+			{% if entry.pageTitle|length %}
+				{% set title = entry.pageTitle %}
+			{% elseif pageTitle is defined %}
+				{% set title = pageTitle %}
+			{% else %}
+				{% set title = entry.title %}
+			{% endif %}
+
+			
+		{% elseif category is defined %} 
+			{% set entry = category %}
+
+			{% if entry.pageTitle|length %}
+				{% set title = entry.pageTitle %}
+			{% elseif pageTitle is defined %}
+				{% set title = pageTitle %}
+			{% else %}
+				{% set title = entry.title %}
+			{% endif %}
+		{% endif %}
+
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="theme-color" content=""/>
+		
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+
+		<meta name="og:title" content="{{ title }}"/>
+		<meta name="og:url" content="{{ entry.url }}"/>
+		
+		<meta name="og:image" content="{{ siteUrl }}assets/craft_img/Nominee-PreviewImage.png"/>
+		<meta name="og:image:width" content="1200"/>
+		<meta name="og:image:height" content="630"/>
+
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:site" content="{{ entry.url }}"/>
+		<meta name="twitter:title" content="{{ title }}"/>
+		
+		<meta name="twitter:image" content="{{ siteUrl }}assets/craft_img/Nominee-PreviewImage.png"/>
+
+		{% if entry.pageDescription is defined and entry.pageDescription is not null %}
+			<meta name="description" content="{{ entry.pageDescription }}"/>
+			<meta name="og:description" content="{{ entry.pageDescription }}"/>
+			<meta name="twitter:description" content="{{ entry.pageDescription }}"/>
+		{% else %}
+			<meta name="description" content="{{ title }}"/>
+			<meta name="og:description" content="{{ title }}"/>
+			<meta name="twitter:description" content="{{ title }}"/>
+		{% endif %}
+
+
+		<title>{{ title }}</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ siteUrl }}assets/static/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ siteUrl }}assets/static/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ siteUrl }}assets/static/favicon/favicon-16x16.png">
+		<link rel="manifest" href="{{ siteUrl }}assets/static/favicon/site.webmanifest">
+		<link rel="mask-icon" href="{{ siteUrl }}assets/static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="canonical" href="{{ entry.url }}">
+
+		
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+		
+		<link href="{{ siteUrl }}assets/css/external.css" rel="stylesheet"/> 
+		<link href="{{ siteUrl }}assets/css/style.css" rel="stylesheet"/>
+		{# <link href="{{ siteUrl }}assets/accordion/accord-style.css" rel="stylesheet"/> #}
+		
+
+		
+		
+	{% block head %}{% endblock %}
+
+		{% set current = craft.app.request.fullPath %}
+		{% set parent = current|split('/') %}
+		{% set parent = parent[0] %}
+
+		{% set currentPath = craft.app.request.pathInfo %}
+		
+
+	</head>
+	<body id="body" class="is-loading overflow-x-hidden">
+		
+		<div id="smooth-wrapper">
+    		<div id="smooth-content">
+				
+
+				<main id="main" class="{% if title %}{{ title }}{% endif %} relative "   >
+					<div id="loading" class=" transition-all duration-300 absolute w-full h-full top-0 bg-navy opacity-100" style="z-index:1000"></div>
+					
+					{% include "components/_header" %}
+					
+					{% block content %}
+						CRAFT IS NOT WORKING CORRECTLY. PLEASE REACH OUT TO YOUR SITE ADMINISTRATOR.
+					{% endblock %}
+
+					
+					
+					
+				</main>
+			
+						
+			</div>
+		</div>
+		{{ sprig.script }}
+		<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+		
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script>
+		
+		<script src="{{ siteUrl}}assets/gsap/SplitText.min.js"></script>
+		<script src="{{ siteUrl}}assets/gsap/ScrollSmoother.min.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.6.2/dist/smooth-scrollbar.min.js"></script>-->
+		<script src="https://unpkg.com/htmx.org@1.7.0"></script>
+		
+		
+
+		<script src="{{ siteUrl}}assets/js/external.js"></script>
+		<script src="{{ siteUrl}}assets/js/scripts.js"></script>
+		
+		
+		
+    
+	</body>
+	
+</html>

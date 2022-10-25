@@ -1,0 +1,66 @@
+<style>
+.accordion-button:not(.collapsed) {
+    color:rgba(247, 206, 8,1);
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+</style>
+
+
+<div class="">
+    <div class="">
+    <div class="accordion " id="accordionExample">
+      {% set opps = craft.entries.section("faq").limit(limit) %}
+      {% for opp in opps %}
+      <div class="accordion-item ">
+        <h2 class="accordion-header mb-0 border-0" id="panel{{ loop.index }}">
+          <button class="accordion-button collapsed relative flex items-center w-full pt-5  px-5 font-header text-4xl text-left md:text-5xl uppercase text-{{ textColor }} border-0 rounded-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}"
+            aria-controls="collapse{{ loop.index }}">
+            {{ opp.title }}
+          </button>
+        </h2>
+        <div id="collapse{{ loop.index }}" class="accordion-collapse collapse border-0" aria-labelledby="panel{{ loop.index }}"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body pt-2 px-5 pl-20">
+            {% if opp.textArea01 is defined and opp.textArea01 is not null %}
+                    {% set colorSelect = "text-" ~ textColor %}
+                    {% set borderSelect = "border-" ~ textColor %}
+                    {% set bgSelect = "bg-" ~ textColor %}
+
+                    {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                    {% set h2Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
+                    {% set h3Classes = "font-sans text-xl md:text-2xl lg:text-3xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h4Classes = "font-sans text-lg md:text-xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h5Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                    {% set pClasses = "font-sans text-lg mb-5 leading-tight " ~ colorSelect %}
+                    {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set strongClasses = "font-bold " ~ colorSelect %}
+                    {% set aClasses = "btn-outline border-2 hover:" ~ bgSelect ~ " " ~ colorSelect ~ " hover:text-" ~ bgColor ~ " " ~ borderSelect %}
+                    {% set imgClasses = "w-auto h-full object-contain" %}
+                    {% set figStyle = "max-height: 100%;" %}
+                
+                    {{ opp.textArea01 | retcon([
+                        ['attr', 'h1', { class: h1Classes }],
+                        ['attr', 'h2', { class: h2Classes }],
+                        ['attr', 'h3', { class: h3Classes }],
+                        ['attr', 'h4', { class: h4Classes }],
+                        ['attr', 'h5', { class: h5Classes }],
+                        ['attr', 'p', { class: pClasses }],
+                        ['attr', 'li', { class: liClasses }],
+                        ['attr', 'strong', { class: strongClasses }],
+                        ['attr', 'a', { class: aClasses }],
+                        ['attr', 'img', { class: imgClasses }],
+                        ['attr', 'figure', { style: figStyle }],
+
+                    ]) }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+</div>

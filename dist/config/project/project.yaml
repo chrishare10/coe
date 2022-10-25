@@ -1,0 +1,187 @@
+dateModified: 1666707515
+email:
+  fromEmail: chris.hare@supergiant.agency
+  fromName: 'Council Of Entrepreneurs '
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: true
+    name: Assets
+    settings:
+      path: '@webroot/assets/static'
+    type: craft\fs\Local
+    url: '@web/assets/static'
+meta:
+  __names__:
+    0adffac6-0f31-4e05-ac39-05e7fad8183b: 'Image 09' # Image 09
+    0b7b15ab-5e0e-4481-9bdf-d84da890369c: FAQ # FAQ
+    1a2d621f-8e1e-4863-a4c3-ac436d2564b3: 'Text Area 01' # Text Area 01
+    1b60fe2e-d7f5-4aa1-959d-3ffb2bd2536b: 'Text Color' # Text Color
+    1c3bd108-6642-4b49-87bb-d3d27ce152ee: 'Stage Picker' # Stage Picker
+    1c77317c-d797-4046-a89f-60a7b641a7b1: Home # Home
+    1d5116d5-98bc-4a30-80ac-484f43321799: 'Page Description' # Page Description
+    2acdf2e0-f8d8-4d29-9a55-9c20b86fcaad: 'Tab Two Content' # Tab Two Content
+    2ad30eef-b4a2-4403-aea0-18b71b9ca516: 'Image 12' # Image 12
+    2ae7a77d-d166-4535-befb-8ad152d07463: 'Image 03' # Image 03
+    2b6c3a87-34fa-45a7-9608-c96ed1f8a857: 'Image 13' # Image 13
+    2eeb564e-ad63-4449-b4dd-2c25d2e019bb: 'Image 15' # Image 15
+    2f2268cc-1a97-4505-abfe-74284d60134e: 'Text 04' # Text 04
+    3c5a66db-0a7b-4b30-9702-8497be3dfdef: 'Background Color' # Background Color
+    3c4502c7-8658-4a4f-b128-b8c9105945c0: 'New Member Limit' # New Member Limit
+    3fa375bd-b50a-4c3c-b1e5-6e7e36fa7f6e: 'Video Embed' # Video Embed
+    3ffe7dc2-1816-4a46-8a9d-99a74058ff86: 'Column Three Content' # Column Three Content
+    4bb68f73-049e-44d7-9a6b-b95cde5aeb28: 'Resources Index' # Resources Index
+    4c7b9afb-cda3-4232-b49a-1b03d8c403db: 'Background Color' # Background Color
+    4cb84682-6573-42eb-b759-1dc9dab864f3: 'Text 06' # Text 06
+    4e2df9e0-163a-43dc-a36c-188858cb1212: 'Image 14' # Image 14
+    5c647c1e-7c7b-448f-bea9-6ef32f1bc81d: 'News Resources Picker' # News Resources Picker
+    05caf56e-6e29-4324-bba9-d88a49bca39a: 'Resources Index' # Resources Index
+    5f9a0c24-89ae-496e-80f3-ef8dbe23196f: Tabs # Tabs
+    6b55a1e7-f2b0-4424-b10a-76565e7bd24d: 'Main Content' # Main Content
+    6c3bfc6a-6e00-45e4-8ef2-2287fae46da6: Accordion # Accordion
+    06fc47ff-0df5-4105-ae6d-a490159ff8c7: 'Section Handle' # Section Handle
+    7d59d3a6-bfe2-487d-aa0d-da1db81aaf5c: 'Column One Content' # Column One Content
+    7ddc6052-b41b-4c37-9aeb-31f4a7ff7963: 'Tab One Title' # Tab One Title
+    7f2c471f-9451-4c4a-98a0-eb729035e59f: 'Text Area 11' # Text Area 11
+    8d897e72-789e-48bd-b2c5-05e3dde851a7: 'Council Of Entrepreneurs ' # Council Of Entrepreneurs 
+    8eb8da1d-a8b3-4214-a8c1-2eaa6f15fe3e: Default # Default
+    9e1ef6a6-883c-493f-89ef-d83e2059a5a7: 'Image 04' # Image 04
+    9fcaecec-5337-470f-b87e-fb5830fa1728: Members # Members
+    15b52808-f0bb-468e-9874-f480418af0f1: 'Column One Content' # Column One Content
+    18c12b58-4153-4466-b5ed-32d8d6db84c5: 'Column One Content' # Column One Content
+    24cf30a5-008c-490e-ac39-7b7a7607bf3d: 'Welcome Section' # Welcome Section
+    25fd2c47-b005-4706-badd-1705a9fec496: 'Column One Content' # Column One Content
+    28f1ffa3-5eee-4adf-8949-fe56abccf69e: Default # Default
+    35dea1fa-60f9-4937-804a-d1282b9be2ce: Sign-In # Sign-In
+    35e70e3a-a9b7-4a6c-9a0c-4fbb0e8269bc: 'Become A Member' # Become A Member
+    39c39a3c-f4ad-4ab8-a015-4ee400f2923d: 'Image 06' # Image 06
+    47ca10e8-489e-44a5-9325-212d29e3a434: 'Text Area 08' # Text Area 08
+    57d506ad-87dd-47e8-912e-4ea636c203ad: 'Tab Three Content' # Tab Three Content
+    58e3ab4f-e64a-4a3b-99b7-8d5350236349: 'Accordion Section Handle' # Accordion Section Handle
+    59c19214-f92c-4f2f-aa4f-a819605f72ab: Features # Features
+    60a20465-3f3e-46f9-86e4-812b526c635c: 'Column One Content' # Column One Content
+    61f61c37-a5f4-4ceb-94b9-b2fe9b2a71ba: 'Text 08' # Text 08
+    63e58ee9-667e-47ab-8d86-b93f7cb6dad8: 'Background Color' # Background Color
+    80ee315c-9526-43ca-842c-7e30f75e0ccf: Directory # Directory
+    85a2c8a1-124f-4049-97e3-ee744e790cb1: 'Background Color' # Background Color
+    86bd4ceb-7f46-44d8-90cc-71faa9789f89: Directory # Directory
+    86e4889d-b765-4f85-a3a8-0b9e6819c869: 'Page Title' # Page Title
+    86eb3847-6760-47f1-9a51-b8a6cba88a43: 'Directory Grid' # Directory Grid
+    97d24863-0a77-4cc9-ad82-f4aae29a8627: 'Background Color' # Background Color
+    99b76e5c-7a68-49d1-8d76-b7c0b539935c: 'Featured Post' # Featured Post
+    111df8ac-eac1-4760-935a-75f0733e86ad: 'Accordion Limit' # Accordion Limit
+    123d0168-163b-4f6f-93d7-f8f9589ce721: 'Industry Picker' # Industry Picker
+    151a2677-d4e7-496a-9fbb-e0141540a447: 'Two Column' # Two Column
+    165f457f-00a2-4828-83c0-d1deb0caa78f: 'Background Color' # Background Color
+    343c118a-3a3b-450d-bad7-d715943511f0: Common # Common
+    383ca3df-78c3-4f80-8573-740fd5d72441: 'Text 05' # Text 05
+    388bf0b3-fa55-4ea9-9126-42ea7f433638: Static # Static
+    421f440d-cc13-4027-bbb2-c1ba6969db41: 'Column Two Content' # Column Two Content
+    423c4c7c-b16b-4a09-a36b-0f414a1588de: 'Background Color' # Background Color
+    433ce396-abf0-4025-92a2-36a49e9acca7: 'Tab Two Title' # Tab Two Title
+    551e8dea-3112-4727-ae90-d69a454f1df4: 'Text 10' # Text 10
+    560e401e-71da-4a26-82f4-fd9a5c3e4c91: 'Become A Member' # Become A Member
+    586b93de-fba7-4cf0-ab83-43e580565258: Default # Default
+    614a7ddf-82d8-4d37-8b97-a2c835929ea6: 'Form Headline' # Form Headline
+    743eae17-8138-4a52-a285-81351e9e460c: 'Text 02' # Text 02
+    753a8e1c-9a82-4a63-8644-a7075dda166f: Large # Large
+    773d0f4d-e275-4d06-8e60-96c96325746f: 'Column One Content' # Column One Content
+    879e093e-7a4d-44d8-bca0-1d9cb75ee7e9: Thanks # Thanks
+    938a6eae-36aa-4d65-9635-24827ac9ed0d: 'Text 07' # Text 07
+    2129d3a8-e9b5-4e10-ad0f-ac48feeb5b9b: 'Member Limit' # Member Limit
+    4064fdb2-bbfc-4975-b876-b00570205c58: 'Text Area 03' # Text Area 03
+    4463df02-9e95-4918-bba3-38471dbd5a94: Resources # Resources
+    7323e2e7-81d9-4d1c-a9dc-177136e90c27: 'Text 09' # Text 09
+    7459d8a9-cae3-47a7-baa5-8e53be47ffef: Small # Small
+    19791f1c-caee-4389-b3e5-7d5c75d542b0: 'Text Area 13' # Text Area 13
+    24809fc5-8faa-451d-8da0-5ca197e512f5: 'Text Area 12' # Text Area 12
+    229466a4-ee7b-4391-a8cc-484122345c57: 'Tabs Section Handle' # Tabs Section Handle
+    474740f9-4bec-4813-b48f-0cac1d13a35f: 'Text 03' # Text 03
+    1637767f-f37a-4171-a631-aba3b2945182: Default # Default
+    3080233a-16f5-4b75-b9e2-3ba5cc50c1f1: 'Text Area 05' # Text Area 05
+    3260011f-bdee-42cb-86f6-e171cd7d65de: 'Image 02' # Image 02
+    9483312e-0e0b-40c8-ae13-3f9650d25ef2: 'Image 05' # Image 05
+    51899720-4683-47e5-988f-e6bce13b5235: 'Member Stage' # Member Stage
+    70203705-7fdb-4702-9223-d1787a5cdbf4: Dashboard # Dashboard
+    92453156-1a37-4029-9b8d-d01208584c29: 'Two Column Form' # Two Column Form
+    a076b444-4e5a-47e2-bd5c-efdb85859d60: 'Image 01' # Image 01
+    a3df3a2f-3bcb-4d17-8bf9-97764b0f0ab6: 'Brand Assets' # Brand Assets
+    a572aea3-da9a-4ec6-9351-3af5f279fa6a: 'Column Two Justify' # Column Two Justify
+    a5145ce1-aa00-4229-8cda-a5207715b013: 'Image 11' # Image 11
+    a6145c93-2505-42cc-8ec9-cfb4b21ef843: 'Background Color' # Background Color
+    a205733b-ae8d-4fee-93ab-9ee26acba0bb: 'Text Area 07' # Text Area 07
+    aa1192e0-c852-4971-b864-5346b5413fea: Sign-In # Sign-In
+    af6413bd-320e-4496-9a22-11fc02d62957: 'Column One Justify' # Column One Justify
+    b6e3892f-635a-460c-b63e-f7b85708c4f3: 'Text Area 14' # Text Area 14
+    b7a4b63f-01ba-4a6f-9482-7909fb879612: Limit # Limit
+    b14ddbe3-099f-4d6c-9357-b0ee8d6c9cf1: 'Member Group' # Member Group
+    b24cf811-a01e-439d-809c-43222c69d625: About # About
+    b32bc18c-ca00-4206-b883-41bc2307866b: 'Tab Three Title' # Tab Three Title
+    b3115b4b-81ee-422a-8199-4a8eb1ea5e15: 'Text Area 04' # Text Area 04
+    b6630d0c-6345-4c8e-837c-b590dd259279: 'Background Color' # Background Color
+    bba0434a-142a-4098-b5ec-4ea3e7b5c8a0: Admin # Admin
+    bee7d520-64e2-4fcc-9feb-8dc11abe57a2: Image # Image
+    bfb9aee0-2f1f-4645-99db-ac3f9146e958: Medium # Medium
+    c066dedb-46aa-4fa4-8248-15b0d8989220: 'Image Background Banner' # Image Background Banner
+    c214d1d5-b4a4-4996-8ff8-8a8b9f80f7aa: 'Text Area 09' # Text Area 09
+    c8364c7c-15f1-42d1-984d-921f3d20df96: 'Resources Grid' # Resources Grid
+    caecc0c3-bd4d-4f1f-a592-0e73bda5c2ad: 'FAQ Grid' # FAQ Grid
+    ce74ae76-c328-4a51-aa4b-dce47f9e3ea5: Thanks # Thanks
+    d5e33019-8cf7-4f8d-847c-54b32cb0324b: 'Text Area 10' # Text Area 10
+    d28e9993-deb7-40be-9995-561dda68735e: 'Text 01' # Text 01
+    d57f3430-dd51-461b-ad45-652433f099d7: 'Group Picker' # Group Picker
+    d795c770-8528-402e-8358-5a6134722a57: 'Text Area 06' # Text Area 06
+    d905c3cb-cc1a-4d7f-a8da-86602e84b476: 'Membership Options' # Membership Options
+    d2962e90-4c96-43f6-af5d-a6b43dd97068: Image # Image
+    d5582454-f254-4c43-9910-9fac9336967b: 'Image 10' # Image 10
+    da85e22f-8d57-41ab-b369-e97ab83efee9: 'Logo Image Mask Section' # Logo Image Mask Section
+    de8e69e2-5e4f-4123-9f15-0b6e717e9fd8: 'Login Form' # Login Form
+    deb0e64a-0ae0-47db-bd92-24c2fb8492c0: 'Image 07' # Image 07
+    e0104155-7f9b-4923-a21a-fc95a242b97c: 'Text Area 02' # Text Area 02
+    e1f9cd8c-40fa-4063-a2ed-3e5160346de8: 'FAQ Limit' # FAQ Limit
+    e3ed13e1-534e-4e11-acc5-2230d43b80d5: 'Background Color' # Background Color
+    e38fe1ad-dbf9-4b5e-ae1f-231c41e208f6: 'Background Color' # Background Color
+    e51baa2f-2799-4d06-b214-1bef20efcead: 'News Resources' # News Resources
+    e263b920-aa56-4377-aeb4-2a98b3e14294: 'Member Industry' # Member Industry
+    e5093295-7616-4502-94d0-8dd09e156a93: 'Text Area 15' # Text Area 15
+    ec5ad981-c468-40ae-aac3-efbcf0661f32: About # About
+    ec36db1c-a265-4b72-be60-6fdd38ae90b5: Arrangement # Arrangement
+    ec118dc2-5a3b-43b7-92af-433c417d0adb: 'Image 08' # Image 08
+    edc670e8-2842-4545-a731-f01d67817b72: 'Form Handle' # Form Handle
+    f2a1d668-a9ed-4f22-94d3-0ada2e911d0e: 'Three Column' # Three Column
+    f6c2f0c0-74bb-436e-9d7c-e16ed8d3da06: SEO # SEO
+    f18e8984-e22e-4469-8a0a-2213e8686300: Home # Home
+    f67fb6b7-3035-4fbb-aa21-48d1056abec6: 'Background Color' # Background Color
+    f78cb2e5-155b-4b47-9203-e2d3b3b26aa3: 'Column Two Image' # Column Two Image
+    fa3844c7-945a-4170-9c43-eec500f511c8: 'Tab One Content' # Tab One Content
+    fa888681-e2a8-4b13-bda5-4cdc7f57d27a: 'Column Two Content' # Column Two Content
+    fc02a96e-4b23-4b25-982c-6afd0311456c: 'Council Of Entrepreneurs ' # Council Of Entrepreneurs 
+    fd6312bb-8493-408e-86e7-900dda8fcd3e: 'Component Matrix' # Component Matrix
+    ff5ac457-626c-46b7-a45f-9dec3edd917d: Dashboard # Dashboard
+plugins:
+  express-forms:
+    edition: lite
+    enabled: true
+    schemaVersion: 1.0.2
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+system:
+  edition: pro
+  live: true
+  name: 'Council Of Entrepreneurs '
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
