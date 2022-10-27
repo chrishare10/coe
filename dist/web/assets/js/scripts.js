@@ -19,6 +19,8 @@ $(function() {
     };
   };
 
+ 
+
 
   
   
@@ -285,14 +287,35 @@ if(firstSection){
 }
 
 const fullpageContainer = document.getElementById("fullpage")
+const headerLogo = document.getElementById("coe-logo")
+const mobileHeaderLogo = document.getElementById("coe-logo-mobile")
+ 
 
 if(fullpageContainer) {
 new fullpage('#fullpage', {
 	//options here
+  anchors: ['1', '2', '3', '4', '5'],
 	autoScrolling:true,
 	scrollHorizontally: false,
   scrollOverflow: true,
   onLeave: function(origin, destination,) {
+
+    if(destination.index == 0){
+      $(headerLogo).addClass("w-38");
+      $(headerLogo).removeClass("w-20");
+      $(mobileHeaderLogo).addClass("w-38");
+      $(mobileHeaderLogo).removeClass("w-20");
+    }else {
+      
+      $(headerLogo).removeClass("w-38");
+      $(headerLogo).addClass("w-20");
+      $(mobileHeaderLogo).removeClass("w-38");
+      $(mobileHeaderLogo).addClass("w-20");
+    }
+    
+    
+    
+
     if(origin){
       
       $(navItems).removeClass("text-blue text-red text-salmon text-blue-light text-slate text-brown text-navy text-brick text-yellow")
@@ -408,6 +431,16 @@ new fullpage('#fullpage', {
 });
 }
 
+// const anchor2 = document.getElementById("toSlideTwo")
+// const anchor3 = document.getElementById("toSlideThree")
+
+// anchor2.addEventListener("click", function() {
+//   fullpage_api.moveTo(2);
+// })
+
+// anchor3.addEventListener("click", function() {
+//   fullpage_api.moveTo(3);
+// })
 
 // Accordion
 const accordItems = document.querySelectorAll(".accord-item")
@@ -435,6 +468,9 @@ function delay() {
   }, 200);
 }
 
+
+
+
 if (document.readyState == 'complete') {
   delay();
 } else {
@@ -444,3 +480,4 @@ if (document.readyState == 'complete') {
       }
   }
 }
+

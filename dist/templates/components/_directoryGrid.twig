@@ -57,7 +57,7 @@
     <div class="px-10 md:px-20  z-10 md:h-screen pt-40">
         <form class="flex flex-col md:flex-row flex-wrap gap-5 mb-10 ">
 
-            <div class="rounded-lg border-2 border-{{ textColor }} text-{{ textColor }} sg-select-box relative">
+            <div class="border-2 border-{{ textColor }} text-{{ textColor }} sg-select-box relative">
                 
                 <div class="flex sg-select-box-label absolute w-full h-full flex-row items-center" style="z-index:-1;"><p class="pl-2 inline-block text-base font-sans text-gray-dark">Group</p></div>
                 <select sprig name="group" value="{{ group }}" class="p-2 pr-16 font-bold sg-select bg-transparent w-11/12 md:w-full">
@@ -74,9 +74,9 @@
                     {% endfor %}
                 </select>
             </div>
-            <div class="rounded-lg border-2 border-{{ textColor }} text-{{ textColor }} sg-select-box relative">
+            <div class="border-2 border-{{ textColor }} text-{{ textColor }} sg-select-box relative">
                 
-                <div class="flex sg-select-box-label absolute w-full h-full flex-row items-center" style="z-index:-1;"><p class="pl-2 inline-block text-base font-sans text-gray-dark">Industry</p></div>
+                <div class="flex sg-select-box-label absolute w-full h-full flex-row items-center" style="z-index:-1;"><p class="pl-2 inline-block text-base font-sans font-semibold text-gray-dark">Industry</p></div>
                 <select sprig name="industry" value="{{ industry }}" class="p-2 pr-16 font-bold sg-select bg-transparent w-11/12 md:w-full">
                     <option value="">All Industries</option>
                     {% set myIndustryQuery = craft.categories()
@@ -91,9 +91,9 @@
                     {% endfor %}
                 </select>
             </div>
-            <div class="rounded-lg border-2 border-{{ textColor }} text-{{ textColor }} sg-select-box relative">
+            <div class="border-2 border-{{ textColor }} text-{{ textColor }} sg-select-box relative">
                 
-                <div class="flex sg-select-box-label absolute w-full h-full flex-row items-center" style="z-index:-1;"><p class="pl-2 inline-block text-base font-sans text-gray-dark">Stage</p></div>
+                <div class="flex sg-select-box-label absolute w-full h-full flex-row items-center" style="z-index:-1;"><p class="pl-2 inline-block text-base font-sans font-semibold text-gray-dark">Stage</p></div>
                 <select sprig name="stage" value="{{ stage }}" class="p-2 pr-16 font-bold sg-select bg-transparent w-11/12 md:w-full">
                     <option value="">All Stages</option>
                     {% set myStageQuery = craft.categories()
@@ -131,7 +131,7 @@
                     {% endif %}
 
                     {% if entry.text02 is defined and entry.text02 is not null %}
-                    <p class="text-md font-sans text-{{textColor}} leading-none pb-3">{{ entry.text02 }}</p>
+                    <p class="text-md font-sans font-semibold text-{{textColor}} leading-none pb-3">{{ entry.text02 }}</p>
                     {% endif %}
                 </div>
             </div>
@@ -143,7 +143,7 @@
                     {% for i in 1..pageInfo.totalPages %}
                     {% if i == page %}
                     <div class="border-2 border-blue-light py-1 px-2 bg-blue-light leading-none">
-                        <p class="font-sans text-sm text-{{ bgColor }}">{{ i }}</p>
+                        <p class="font-sans font-semibold text-sm text-{{ bgColor }}">{{ i }}</p>
                     </div>
                     {% else %}
                         {# Refreshes the component and pushes the new value into the URL #}

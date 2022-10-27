@@ -31,7 +31,7 @@
     <input id="{{ field.handle }}" type="hidden" name="{{ field.handle }}" value="{{ field.value }}">
     {% elseif field.type == "textarea" %}
         <div class="w-full col-span-1 md:col-span-2 mt-5">
-            <label for="{{ field.handle }}" class="w-full font-sans text-base text-{{textColor}} mb-5 l {{ field.isRequired ? 'required' }}">{{ field.label }}</label>
+            <label for="{{ field.handle }}" class="w-full font-sans font-semibold text-base text-{{textColor}} mb-5 l {{ field.isRequired ? 'required' }}">{{ field.label }}</label>
             <textarea class="w-full p-2  mb-3 mt-3 bg-{{bgColor}} text-{{textColor}} border-2 border-{{ textColor }}"  rows="5" cols="40" id="{{ field.handle }}" name="{{ field.handle }}">
                 {{- field.value -}}
             </textarea>
@@ -81,7 +81,7 @@
                 {% endfor %}
                 </ul>
             {% endif %}
-            <label for="{{ field.handle }}" class="w-full font-sans text-base text-{{ textColor}} mb-5  {{ field.isRequired ? 'required' }}">{{ field.label }}</label>
+            <label for="{{ field.handle }}" class="w-full font-sans font-semibold text-base text-{{ textColor}} mb-5  {{ field.isRequired ? 'required' }}">{{ field.label }}</label>
         </div>
         
     {% endif %}

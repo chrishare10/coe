@@ -12,13 +12,14 @@
 
                     {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
                     {% set h2Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
-                    {% set h3Classes = "font-sans text-xl md:text-2xl lg:text-3xl leading-none mb-5 " ~ colorSelect %}
-                    {% set h4Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
-                    {% set h5Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
-                    {% set pClasses = "font-sans text-xl mb-5 leading-tight " ~ colorSelect %}
+                    {% set h3Classes = "font-sans font-semibold text-xl md:text-2xl lg:text-3xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h4Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h5Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                    {% set pClasses = "font-sans font-semibold text-xl mb-5 leading-tight " ~ colorSelect %}
                     {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
                     {% set strongClasses = "font-bold " ~ colorSelect %}
-                    {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set aFirstClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set aSecondClasses = "font-sans hover:text-black ml-3 " ~ colorSelect  %}
                 
                     {{ colOneContent | retcon([
                         ['attr', 'h1', { class: h1Classes }],
@@ -29,7 +30,8 @@
                         ['attr', 'p', { class: pClasses }],
                         ['attr', 'li', { class: liClasses }],
                         ['attr', 'strong', { class: strongClasses }],
-                        ['attr', 'a', { class: aClasses }],
+                        ['attr', 'a[id="first"]', { class: aFirstClasses }],
+                        ['attr', 'a[id="second"]', { class: aSecondClasses }],
 
                     ]) }}
 

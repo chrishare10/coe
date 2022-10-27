@@ -4,10 +4,10 @@
 			<div class="px-10 md:px-20  z-10 h-screen  py-20 md:pt-40">
                 <div class="flex flex-col lg:flex-row {% if loop.index == components|length %}h-11/12 overflow-hidden{% else %}h-full{% endif %}">
                     {% if colOneContent is defined and colOneContent is not null %}
-                    <div class="lg:opacity-40 hover:opacity-100 transition-all  w-full lg:w-1/3 flex flex-col {% if arrangement == "cascade" %}justify-start{% else %}justify-start{% endif %} mb-5 lg:mb-0 lg:p-10 lg:border-r-2 border-navy">
+                    <div class="transition-all  w-full lg:w-1/3 flex flex-col {% if arrangement == "cascade" %}justify-start{% else %}justify-start{% endif %} mb-5 lg:mb-0 lg:p-10 lg:border-r-2 border-navy">
                         <div class=" ">
                         
-                            <div class="">
+                            <div  >
                                 
 
                             {% set colorSelect = "text-" ~ textColor %}
@@ -15,13 +15,13 @@
                             {% set bgSelect = "bg-" ~ textColor %}
 
                             
-                            {% set h3Classes = "font-header text-4xl md:text-6xl lg:text-5xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set h4Classes = "font-header text-2xl md:text-3xl lg:text-4xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set h5Classes = "font-header text-xl md:text-2xl lg:text-3xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set pClasses = "font-sans text-xl mb-5 leading-tight transform -translate-y-6 " ~ colorSelect %}
-                            {% set liClasses = "mb-7 border-t pl-10 pt-5 transform -translate-y-6 " ~ colorSelect ~ " " ~ borderSelect %}
-                            {% set strongClasses = "font-bold transform -translate-y-6 " ~ colorSelect %}
-                            {% set aClasses = "btn-outline border-2 hover:text-salmon hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set h3Classes = "pl-3 font-header text-4xl md:text-6xl lg:text-5xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set h4Classes = "pl-3 font-header text-2xl md:text-3xl lg:text-4xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set h5Classes = "pl-3 font-header text-xl md:text-2xl lg:text-3xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set pClasses = "pl-3 font-sans font-semibold text-xl mb-5 leading-tight transform -translate-y-6 " ~ colorSelect %}
+                            {% set liClasses = "pl-3 mb-7 border-t pl-10 pt-5 transform -translate-y-6 " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set strongClasses = "pl-3 font-bold transform -translate-y-6 " ~ colorSelect %}
+                            {% set aClasses = "pl-3 btn-outline border-2 hover:text-salmon hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
                         
                             {{ colOneContent | retcon([
                                 ['change', 'h1,h2', 'h3'],
@@ -43,10 +43,10 @@
                     {% endif %}
 
                     {% if colTwoContent is defined and colTwoContent is not null %}
-                    <div class="lg:opacity-40 hover:opacity-100 transition-all  w-full lg:w-1/3 flex flex-col {% if arrangement == "cascade" %}justify-center{% else %}justify-start{% endif %} mb-5 lg:mb-0 lg:p-10 lg:border-r-2 border-navy">
+                    <div class="transition-all  w-full lg:w-1/3 flex flex-col {% if arrangement == "cascade" %}justify-center{% else %}justify-start{% endif %} mb-5 lg:mb-0 lg:p-10 lg:border-r-2 border-navy">
                         <div class=" ">
                         
-                            <div class="">
+                            <div >
                                 
 
                             {% set colorSelect = "text-" ~ textColor %}
@@ -54,13 +54,13 @@
                             {% set bgSelect = "bg-" ~ textColor %}
 
                             
-                            {% set h3Classes = "font-header text-4xl md:text-6xl lg:text-5xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set h4Classes = "font-header text-2xl md:text-3xl lg:text-4xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set h5Classes = "font-header text-xl md:text-2xl lg:text-3xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set pClasses = "font-sans text-xl mb-5 leading-tight transform -translate-y-6 " ~ colorSelect %}
-                            {% set liClasses = "mb-7 border-t pl-10 pt-5 transform -translate-y-6 " ~ colorSelect ~ " " ~ borderSelect %}
-                            {% set strongClasses = "font-bold transform -translate-y-6 " ~ colorSelect %}
-                            {% set aClasses = "btn-outline border-2 hover:text-salmon hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set h3Classes = "pl-3 font-header text-4xl md:text-6xl lg:text-5xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set h4Classes = "pl-3 font-header text-2xl md:text-3xl lg:text-4xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set h5Classes = "pl-3 font-header text-xl md:text-2xl lg:text-3xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set pClasses = "pl-3 font-sans font-semibold text-xl mb-5 leading-tight transform -translate-y-6 " ~ colorSelect %}
+                            {% set liClasses = "pl-3 mb-7 border-t pl-10 pt-5 transform -translate-y-6 " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set strongClasses = "pl-3 font-bold transform -translate-y-6 " ~ colorSelect %}
+                            {% set aClasses = "pl-3 btn-outline border-2 hover:text-salmon hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
                         
                             {{ colTwoContent | retcon([
                                 ['change', 'h1,h2', 'h3'],
@@ -82,10 +82,10 @@
                     {% endif %}
 
                     {% if colThreeContent is defined and colThreeContent is not null %}
-                    <div class="lg:opacity-40 hover:opacity-100 transition-all  w-full lg:w-1/3 flex flex-col {% if arrangement == "cascade" %}justify-end{% else %}justify-start{% endif %} mb-5 lg:mb-0 lg:p-10">
+                    <div class="transition-all  w-full lg:w-1/3 flex flex-col {% if arrangement == "cascade" %}justify-end{% else %}justify-start{% endif %} mb-5 lg:mb-0 lg:p-10">
                         <div class=" ">
                         
-                            <div class="">
+                            <div>
                                 
 
                             {% set colorSelect = "text-" ~ textColor %}
@@ -93,13 +93,13 @@
                             {% set bgSelect = "bg-" ~ textColor %}
 
                             
-                            {% set h3Classes = "font-header text-4xl md:text-6xl lg:text-5xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set h4Classes = "font-header text-2xl md:text-3xl lg:text-4xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set h5Classes = "font-header text-xl md:text-2xl lg:text-3xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
-                            {% set pClasses = "font-sans text-xl mb-5 leading-tight transform -translate-y-6 " ~ colorSelect %}
-                            {% set liClasses = "mb-7 border-t pl-10 pt-5 transform -translate-y-6 " ~ colorSelect ~ " " ~ borderSelect %}
-                            {% set strongClasses = "font-bold transform -translate-y-6 " ~ colorSelect %}
-                            {% set aClasses = "btn-outline border-2 hover:text-salmon hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set h3Classes = "pl-3 font-header text-4xl md:text-6xl lg:text-5xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set h4Classes = "pl-3 font-header text-2xl md:text-3xl lg:text-4xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set h5Classes = "pl-3 font-header text-xl md:text-2xl lg:text-3xl leading-none uppercase mb-5 transform -translate-y-6 " ~ colorSelect %}
+                            {% set pClasses = "pl-3 font-sans font-semibold text-xl mb-5 leading-tight transform -translate-y-6 " ~ colorSelect %}
+                            {% set liClasses = "pl-3 mb-7 border-t pl-10 pt-5 transform -translate-y-6 " ~ colorSelect ~ " " ~ borderSelect %}
+                            {% set strongClasses = "pl-3 font-bold transform -translate-y-6 " ~ colorSelect %}
+                            {% set aClasses = "pl-3 btn-outline border-2 hover:text-salmon hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
                         
                             {{ colThreeContent | retcon([
                                 ['change', 'h1,h2', 'h3'],

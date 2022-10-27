@@ -11,7 +11,7 @@
 						<span class="sr-only">Exceleration</span>
 						<div class="max-h-16">
 							
-						<svg id="coe-logo" width="113" height="120" viewBox="0 0 113 120"  class=" transition-all duration-300 " fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg id="coe-logo" width="113" height="120" viewBox="0 0 113 120"  class="w-38 transition-all duration-300 " fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M7.91884 33.5721L5.33992 38.2626L0 38.6186L3.66321 42.5209L2.35337 47.7087L7.19598 45.4314L11.7261 48.2821L11.0548 42.972L15.1664 39.5452L9.90806 38.5425L7.91884 33.5721Z" fill="currentColor"/>
 						<path d="M100.866 50.0621L105.396 47.2114L110.239 49.4887L108.929 44.3009L112.592 40.3986L107.252 40.0426L104.673 35.3522L102.684 40.3225L97.4255 41.3253L101.537 44.7521L100.866 50.0621Z" fill="currentColor"/>
 						<path d="M87.7513 26.6235L89.6861 21.6314L94.9337 20.5716L90.784 17.191L91.3982 11.8728L86.9007 14.7724L82.0336 12.5467L83.4005 17.7209L79.7781 21.6613L85.1234 21.9602L87.7513 26.6235Z" fill="currentColor"/>
@@ -35,23 +35,31 @@
 				<div class="flex flex-row items-center">
 					
 					
+					
+					
 					<nav id="nav-items" class="hidden md:flex justify-end  space-x-6">
+						{% if currentUser %}
+						<a href="{{siteUrl}}directory" class="nav-item hidden xl:block font-header text-2xl tracking-wide leading-none mt-1 uppercase hover:text-gray py-2 transition-all duration-300">
+							Directory
+						</a>
+						<a href="{{ siteUrl }}dashboard#2" class="nav-item hidden xl:block font-header text-2xl tracking-wide leading-none mt-1 uppercase hover:text-gray py-2 transition-all duration-300">
+							Resources
+						</a>
+						<a href="{{ siteUrl }}dashboard#3" class="nav-item hidden xl:block font-header text-2xl tracking-wide leading-none mt-1 uppercase hover:text-gray py-2 transition-all duration-300">
+							Contact
+						</a>
+						{% else %}
 						<a href="{{siteUrl}}about" class="nav-item hidden xl:block font-header text-2xl tracking-wide leading-none mt-1 uppercase hover:text-gray py-2 transition-all duration-300">
 							About COE
 						</a>
 						<a href="{{siteUrl}}resources" class="nav-item hidden xl:block font-header text-2xl tracking-wide leading-none mt-1 uppercase hover:text-gray py-2 transition-all duration-300">
 							Resources
 						</a>
+						{% endif %}
 						
-						{# {% if currentUser %}
-						
-						<a href="{{ siteUrl }}dashboard" class="btn-white hidden xl:block ">
-							My Dashboard
-						</a>
-						{% else %} #}
 						<div class="flex flex-col items-center">
 							{% if currentUser %}
-							<a href="{{ logoutUrl }}dashboard" class="nav-btn btn-header border-2 hidden xl:block ">
+							<a href="{{ logoutUrl }}" class="nav-btn btn-header border-2 hidden xl:block ">
 								Logout
 							</a>
 							<a href="{{ siteUrl }}admin/myaccount" class="nav-item hidden xl:block font-header text-lg tracking-wide leading-none uppercase hover:text-gray py-2 transition-all duration-300">

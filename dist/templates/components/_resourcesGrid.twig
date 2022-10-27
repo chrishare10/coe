@@ -2,7 +2,7 @@
     <div class="border-r-2 border-navy absolute h-full left-5 md:left-10 top-0"></div>
 
     <div class="px-10 md:px-20  z-10 lg:h-screen  py-20 md:pt-40">
-        <div class="flex flex-col md:flex-row {% if loop.index == components|length %}md:h-4/5 overflow-hidden{% else %}h-full{% endif %}">
+        <div class="flex flex-col md:flex-row overflow-x-auto {% if loop.index == components|length %}md:h-4/5 overflow-y-hidden{% else %}h-full{% endif %}">
 
             {% set colorSelect = "text-" ~ textColor %}
             {% set borderSelect = "border-" ~ textColor %}
@@ -12,7 +12,7 @@
             {% set h3Classes = "font-header text-4xl lg:text-5xl leading-none uppercase mb-5 " ~ colorSelect %}
             {% set h4Classes = "font-header text-2xl md:text-3xl lg:text-4xl leading-none uppercase mb-5 " ~ colorSelect %}
             {% set h5Classes = "font-header text-xl md:text-2xl lg:text-3xl leading-none uppercase mb-5 " ~ colorSelect %}
-            {% set pClasses = "font-sans text-xl mb-1 leading-tight " ~ colorSelect %}
+            {% set pClasses = "font-sans font-semibold text-xl mb-1 leading-tight " ~ colorSelect %}
             {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
             {% set strongClasses = "font-bold " ~ colorSelect %}
             {% set aClasses = "btn-outline border-2 hover:text-salmon hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
@@ -20,7 +20,7 @@
             {% set resources = craft.entries.section("resources").limit(limit) %}
             {% for resource in resources %}
             
-            <div class=" transition-all  w-full md:w-1/3 flex flex-col justify-start md:p-10 mb-5 md:mb-0 md:border-r-2 border-navy">
+            <div class="flex-none transition-all  w-full md:w-1/3 flex flex-col justify-start md:p-10 mb-5 md:mb-0 md:border-r-2 border-navy">
                 <a href="{{ resource.getUrl() }}">
 
                     
@@ -37,6 +37,7 @@
                 </a>
                 
             </div>
+            
             {% endfor %}
         </div>
         {% if loop.index == components|length %}

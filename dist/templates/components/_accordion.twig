@@ -19,9 +19,9 @@
                                 {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
                                 {% set h2Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
                                 {% set h3Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
-                                {% set h4Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
-                                {% set h5Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
-                                {% set pClasses = "font-sans text-xl mb-5 leading-tight " ~ colorSelect %}
+                                {% set h4Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                                {% set h5Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                                {% set pClasses = "font-sans font-semibold text-xl mb-5 leading-tight " ~ colorSelect %}
                                 {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
                                 {% set strongClasses = " text-white" %}
                                 {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
@@ -82,8 +82,9 @@
                         </div>
                         {% endif %}
                     </div>
-                    <div class="relative border-r-2 border-{{ textColor }} cursor-pointer">
-                        <h3 class="{{h3Classes}} transform rotate-90 origin-top-left {% if loop.index != 1 %}translate-x-40{% endif %} " {% if loop.index == 1 %}style="--tw-translate-x: 22rem;width:400px;"{% endif %}>{{ option.title }}</h3>
+                    <div class="relative border-r-2 border-{{ textColor }} cursor-pointer w-40">
+                        <div class="border-r-2 {% if textColor is defined and textColor is not null %}border-{{textColor}}{% endif %} absolute h-full left-14 top-0"></div>
+                        <h3 class="{{h3Classes}} transform rotate-90 origin-top-left translate-x-36 " {% if loop.index == 1 %}style="width:400px;"{% endif %}>{{ option.title }}</h3>
                     </div>
                 </div>
 
@@ -131,9 +132,9 @@
                             {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
                             {% set h2Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
                             {% set h3Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
-                            {% set h4Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
-                            {% set h5Classes = "font-sans text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
-                            {% set pClasses = "font-sans text-xl mb-5 leading-tight " ~ colorSelect %}
+                            {% set h4Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                            {% set h5Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                            {% set pClasses = "font-sans font-semibold text-xl mb-5 leading-tight " ~ colorSelect %}
                             {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
                             {% set strongClasses = " text-white" %}
                             {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}

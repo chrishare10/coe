@@ -97,7 +97,7 @@ header {
   --color-gold: #AC8B12;
   --color-purple: #8D7576;
   --color-red: #A63C30;
-  --accord-item-offset: 10vw;
+  --accord-item-offset: 7vw;
   --accord-item-hover-offset: 2%;
   --easing: cubic-bezier(.8, 0, .2, 1);
   --duration: .6s;
@@ -129,7 +129,7 @@ header {
   grid-template-columns: 1fr 20% auto;
   position: absolute;
   height: 100%;
-  width: 80vw;
+  width: 85vw;
   transition: transform var(--duration) var(--easing);
   margin-left: calc(var(--i) * var(--accord-item-offset));
   overflow: hidden;
@@ -139,7 +139,7 @@ header {
 }
 
 .accord-item-active {
-  transform: translateX(-2vw);
+  transform: translateX(0);
   outline: none;
 }
 
@@ -203,6 +203,12 @@ header {
   transform: rotate(45deg);
 }
 
+.opacity-gradient {
+  mask-image: none;
+  -webkit-mask-image: none;
+  transition: all;
+}
+
 @media (min-width: 768px) {
   header {
     position: fixed;
@@ -226,12 +232,14 @@ header {
   .accord-container {
     display: flex;
   }
-}
-@font-face {
-  font-family: "Flama";
-  src: url("../fonts/FlamaUltracondensed-Bold.otf") format("opentype");
-  font-style: normal;
-  font-weight: 500;
+  .opacity-gradient {
+    mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  }
+  .opacity-gradient:hover {
+    mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgb(0, 0, 0)));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgb(0, 0, 0)));
+  }
 }
 @tailwind base;
 @tailwind components;
@@ -254,4 +262,10 @@ header {
       break-inside: avoid;
     }
   }
+}
+@font-face {
+  font-family: "Flama";
+  src: url("../fonts/FlamaUltracondensed-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
 }

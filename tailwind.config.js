@@ -161,7 +161,7 @@ module.exports = {
         '.btn-outline': {
 
           fontSize: "23px",
-          padding: '.4rem 1rem',
+          padding: '.4rem .6rem',
           display: "inline-block",
           fontFamily: "Flama, Helvetica, Arial, sans-serif",
           fontWeight:"500",

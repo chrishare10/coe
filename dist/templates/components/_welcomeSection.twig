@@ -5,7 +5,7 @@
         <div class="flex flex-col md:flex-row gap-10 {% if loop.index == components|length %}md:h-4/5{% else %}h-full{% endif %}">
             <div class=" w-full md:w-1/2 flex flex-col  {% if entry.title != "Resources Index" and entry.title != "Become A Member" %}md:border-r-2 border-{{textColor}}{% endif %}">
                 <div class="mb-10">
-                    <p class="font-sans text-xl leading-tight text-{{ textColor }}">Welcome back,</p>
+                    <p class="font-sans font-semibold text-xl leading-tight text-{{ textColor }}">Welcome back,</p>
                     <h3 class="font-header uppercase text-5xl md:text-6xl lg:text-7xl leading-none text-{{ textColor }}">{{ currentUser.fullName }}</h3>
                 </div>
                 {% if currentUser.image01.one() is defined and currentUser.image01.one() is not null %}
@@ -31,7 +31,7 @@
                         </div>
                         {% endif %}
 
-                        <p class="font-sans text-2xl leading-tight text-{{ textColor }}">{{user.fullName}}</p>
+                        <p class="font-sans font-semibold text-2xl leading-tight text-{{ textColor }}">{{user.fullName}}</p>
                     </div>
                     {% endfor %}
 
