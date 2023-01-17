@@ -1,0 +1,174 @@
+{% if components is defined and components is not null %}
+{% for block in components.all() %}
+
+    {% if block.backgroundColor is defined and block.backgroundColor is not null %}
+        {% if block.backgroundColor == "yellow" %}
+            {% set textColor = "brick" %}
+        {% elseif block.backgroundColor == "red" %}
+            {% set textColor = "yellow" %}
+        {% elseif block.backgroundColor == "salmon" %}
+            {% set textColor = "navy" %}
+        {% elseif block.backgroundColor == "navy" %}
+            {% set textColor = "blue-light" %}
+        {% elseif block.backgroundColor == "brick" %}
+            {% set textColor = "yellow" %}
+        {% elseif block.backgroundColor == "blue" %}
+            {% set textColor = "yellow" %}
+        {% elseif block.backgroundColor == "brown" %}
+            {% set textColor = "slate" %}
+        {% elseif block.backgroundColor == "blue-light" %}
+            {% set textColor = "navy" %}
+        {% elseif block.backgroundColor == "slate" %}
+            {% set textColor = "red" %}
+        {% endif %}
+    {% endif %}
+
+    {% if block.type == "imageBackgroundBanner" %}
+
+        {% set props = {
+            image: block.image.one(),
+            text: block.mainContent,
+            videoEmbed: block.videoEmbed,
+            textColor: block.textColor
+        }%}
+        {% include 'components/_imageBackgroundBanner' with props %} 
+
+    {% elseif block.type == "twoColumn" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            colOneContent: block.columnOneContent,
+            colOneJustify: block.columnOneJustify,
+            colTwoContent: block.columnTwoContent,
+            colTwoJustify: block.columnTwoJustify,
+        }%}
+        {% include 'components/_twoColumn' with props %} 
+
+    {% elseif block.type == "threeColumn" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            colOneContent: block.columnOneContent,
+            colTwoContent: block.columnTwoContent,
+            colThreeContent: block.columnThreeContent,
+            arrangement: block.arrangement
+        }%}
+        {% include 'components/_threeColumn' with props %} 
+
+    {% elseif block.type == "logoImageMaskSection" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            colOneContent: block.columnOneContent,
+            image: block.image.one()
+        }%}
+        {% include 'components/_logoImageMaskSection' with props %} 
+
+    {% elseif block.type == "accordion" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            colOneContent: block.columnOneContent,
+            accordionHandle: block.accordionSectionHandle,
+            accordionLimit: block.accordionLimit
+        }%}
+        {% include 'components/_accordion' with props %} 
+    
+    {% elseif block.type == "accordionPlaceholder" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            colOneContent: block.columnOneContent,
+            accordionHandle: block.accordionSectionHandle,
+            accordionLimit: block.accordionLimit
+        }%}
+        {% include 'components/_accordionPlaceholder' with props %} 
+
+    {% elseif block.type == "tabs" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            tabsHandle: block.tabsSectionHandle
+        }%}
+        {% include 'components/_tabs' with props %} 
+
+    {% elseif block.type == "featuredPost" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            sectionHandle: block.sectionHandle
+        }%}
+        {% include 'components/_tabs' with props %} 
+
+    {% elseif block.type == "twoColumnForm" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            colOneContent: block.columnOneContent,
+            formHandle: block.formHandle
+        }%}
+        {% include 'components/_twoColumnForm' with props %} 
+
+    {% elseif block.type == "loginForm" %}
+
+        {% set props = {
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            formHeadline: block.formHeadline,
+            image: block.columnTwoImage.one()
+        }%}
+        {% include 'components/_loginGrid' with props %} 
+
+    {% elseif block.type == "welcomeSection" %}
+
+        {% set props = {
+            limit: block.newMemberLimit,
+            bgColor: block.backgroundColor,
+            textColor: textColor
+        }%}
+        {% include 'components/_welcomeSection' with props %} 
+
+    {% elseif block.type == "directoryGrid" %}
+
+    
+
+        
+        {{ sprig('components/_directoryGrid', {
+        
+            'limit': block.memberLimit,
+            'bgColor': block.backgroundColor.value
+        }) }}
+
+    {% elseif block.type == "resourcesGrid" %}
+
+        {% set props = {
+            limit: block.limit,
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+        }%}
+        {% include 'components/_resourcesGrid' with props %} 
+
+    {% elseif block.type == "faqGrid" %}
+
+        {% set props = {
+            limit: block.faqLimit,
+            bgColor: block.backgroundColor,
+            textColor: textColor,
+            colOneContent: block.columnOneContent
+        }%}
+        {% include 'components/_faqGrid' with props %} 
+    
+
+    {% endif %}
+
+    
+{% endfor %}    
+{% endif %}

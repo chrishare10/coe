@@ -1,0 +1,103 @@
+
+<section class="section block bg-{{bgColor}}">
+    <div class="border-r-2 {% if textColor is defined and textColor is not null %}border-{{textColor}}{% endif %} absolute h-full left-5 md:left-10 top-0"></div>
+    <div class="z-10 py-20 md:pt-40  ">
+        <div class="px-10 md:px-20 h-full z-10">
+            {% set membershipOptions = craft.entries.section(accordionHandle).limit(accordionLimit)%}
+                {% set colorSelect = "text-" ~ textColor %}
+                {% set borderSelect = "border-" ~ textColor %}
+                {% set bgSelect = "bg-" ~ textColor %}
+
+                {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                {% set h2Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                {% set h3Classes = "font-header text-4xl leading-none uppercase mb-5 " ~ colorSelect %}
+                {% set h4Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                {% set h5Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                {% set pClasses = "font-sans font-semibold text-xl mb-5 leading-tight " ~ colorSelect %}
+                {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
+                {% set strongClasses = " text-white" %}
+                {% set aClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                {% set imgClasses = "w-auto h-full object-contain" %}
+                {% set figStyle = "max-height: 50%;" %}
+           
+                {% for option in membershipOptions %}
+                <div >
+                    <h3 class="{{h3Classes}}">{{ option.title }}</h3>
+                </div>
+                <div class="flex flex-row w-full justify-between h-full">
+                    <div class=" flex flex-col justify-between pb-20 gap-10 md:gap-20">
+                        <div>
+                            {% if option.textArea01 is defined and option.textArea01 is not null %}
+                            <div>
+                               
+                            
+                                {{ option.textArea01 | retcon([
+                                    ['attr', 'h1', { class: h1Classes }],
+                                    ['attr', 'h2', { class: h2Classes }],
+                                    ['attr', 'h3', { class: h3Classes }],
+                                    ['attr', 'h4', { class: h4Classes }],
+                                    ['attr', 'h5', { class: h5Classes }],
+                                    ['attr', 'p', { class: pClasses }],
+                                    ['attr', 'li', { class: liClasses }],
+                                    ['attr', 'strong', { class: strongClasses }],
+                                    ['attr', 'a', { class: aClasses }],
+                                    ['attr', 'img', { class: imgClasses }],
+                                    ['attr', 'figure', { style: figStyle }],
+
+                                ]) }}
+
+                            </div>
+                            {% endif %}
+                            {% if option.text02 is not null or option.text03 is not null%}
+                            <div>
+                                <p class="text-base text-{{textColor}}">
+                                {% if option.text02 is not null %}
+                                {{ option.text02}}
+                                {% endif %}
+
+                                {% if option.text02 is not null and option.text03 is not null%}
+                                <span class="my-2">|</span>
+                                {% endif %}
+
+                                {% if option.text03 is not null %}
+                                {{ option.text03}}
+                                {% endif %}
+                                </p>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% if option.textArea02 is defined and option.textArea02 is not null %}
+                        <div>
+                             {{ option.textArea02 | retcon([
+                                    ['attr', 'h1', { class: h1Classes }],
+                                    ['attr', 'h2', { class: h2Classes }],
+                                    ['attr', 'h3', { class: h3Classes }],
+                                    ['attr', 'h4', { class: h4Classes }],
+                                    ['attr', 'h5', { class: h5Classes }],
+                                    ['attr', 'p', { class: pClasses }],
+                                    ['attr', 'li', { class: liClasses }],
+                                    ['attr', 'strong', { class: strongClasses }],
+                                    ['attr', 'a', { class: aClasses }],
+                                    ['attr', 'img', { class: imgClasses }],
+                                    ['attr', 'figure', { style: figStyle }],
+
+                                ]) }}
+                        </div>
+                        {% endif %}
+                    </div>
+                   
+                </div>
+
+                
+                
+                {% endfor %}
+            
+        </div>
+    </div>
+
+
+        
+
+
+    
+</section>

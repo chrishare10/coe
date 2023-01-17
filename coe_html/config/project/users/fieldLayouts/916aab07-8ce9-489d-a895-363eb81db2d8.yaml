@@ -1,0 +1,157 @@
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        elementCondition: null
+        fieldUid: d28e9993-deb7-40be-9995-561dda68735e # Text 01
+        instructions: null
+        label: 'Display Name'
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 4e8afd96-7d26-4840-a68a-9846cd0ba3a8
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 2f2268cc-1a97-4505-abfe-74284d60134e # Text 04
+        instructions: null
+        label: Pronouns
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 4d8c79bc-48e8-4678-baab-b549e02f82e4
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 743eae17-8138-4a52-a285-81351e9e460c # Text 02
+        instructions: null
+        label: Title
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 8e9bf1f8-71e6-4456-8993-2be6f735b6d6
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 474740f9-4bec-4813-b48f-0cac1d13a35f # Text 03
+        instructions: null
+        label: Company
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: cf62815b-6b0b-4aa6-94c8-c4b06c12e37f
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 4cb84682-6573-42eb-b759-1dc9dab864f3 # Text 06
+        instructions: null
+        label: 'Company Size'
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: da421afe-570d-4e56-bc77-2bcfd7a07d5d
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: d57f3430-dd51-461b-ad45-652433f099d7 # Group Picker
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 3079d521-ecf5-457f-b6fb-e343300b9897
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 123d0168-163b-4f6f-93d7-f8f9589ce721 # Industry Picker
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 49646939-ee97-4b41-924b-b0ab219c66f3
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 1c3bd108-6642-4b49-87bb-d3d27ce152ee # Stage Picker
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: bd482b34-f523-4843-ac74-cf7c680e5b62
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: a076b444-4e5a-47e2-bd5c-efdb85859d60 # Image 01
+        instructions: null
+        label: Headshot
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 66004631-bbb9-410f-9774-20fbd2bf36b8
+        userCondition: null
+        warning: null
+        width: 100
+    name: Profile
+    uid: 2478b116-5cfc-4e2f-a754-3b39fe81f875
+    userCondition: null
+  -
+    elementCondition: null
+    elements:
+      -
+        elementCondition: null
+        fieldUid: 412d8816-c81f-480f-9cf5-9045eb4d4eb7 # Lightswitch01
+        instructions: null
+        label: 'Display Email?'
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: f5fdf760-78fc-4335-911d-a39e15b8e261
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 383ca3df-78c3-4f80-8573-740fd5d72441 # Text 05
+        instructions: null
+        label: 'Phone Number'
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 353d4505-260c-41c4-a251-0a559ab97cd7
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        elementCondition: null
+        fieldUid: 994f3af7-a97a-4a3e-afcf-9c02e4b7d6be # Lightswitch02
+        instructions: null
+        label: 'Display Phone Number?'
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 44f24c9d-c6d4-4b65-b71c-c843239ef581
+        userCondition: null
+        warning: null
+        width: 100
+    name: 'Contact Info'
+    uid: 9b44f27b-3873-4458-868c-95d3313a8364
+    userCondition: null

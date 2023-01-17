@@ -1,0 +1,57 @@
+<p>Updated Profile</p>
+<hr>
+<ul>
+    <li>Name: <span style="font-weight: bold;">{{ user }}</span></li>
+    <li>Email: <span style="font-weight: bold;">{{ user.email }}</span></li>
+
+    {% if user.text05 %}
+    <li>Phone: <span style="font-weight: bold;">{{ user.text05 }}</span></li>
+    {% endif %}
+
+    {% if user.text04 %}
+    <li>Pronouns: <span style="font-weight: bold;">{{ user.text04 }}</span></li>
+    {% endif %}
+
+    {% if user.text02 %}
+    <li>Title: <span style="font-weight: bold;">{{ user.text02 }}</span></li>
+    {% endif %}
+
+    {% if user.text03 %}
+    <li>Company: <span style="font-weight: bold;">{{ user.text03 }}</span></li>
+    {% endif %}
+
+    {% if user.text06 %}
+    <li>Company Size: <span style="font-weight: bold;">{{ user.text06 }}</span></li>
+    {% endif %}
+
+    {% if user.groupPicker is defined and user.groupPicker is not null %}
+    <li>Group: 
+        <span style="font-weight: bold;">
+        {% for group in user.groupPicker%}
+            {{ group.title}}{% if loop.index < user.groupPicker|length %}, {% endif %}
+        {% endfor %}    
+        </span>
+    </li>
+    {% endif %}
+
+    {% if user.industryPicker is defined and user.industryPicker is not null %}
+    <li>Industry: 
+        <span style="font-weight: bold;">
+        {% for industry in user.industryPicker%}
+            {{ industry.title }}{% if loop.index < user.industryPicker|length %}, {% endif %}
+        {% endfor %}    
+        </span>
+    </li>
+    {% endif %}
+    
+    {% if user.stagePicker is defined and user.stagePicker is not null %}
+    <li>Stage: 
+        <span style="font-weight: bold;">
+        {% for stage in user.stagePicker%}
+            {{ stage.title }}{% if loop.index < user.stagePicker|length %}, {% endif %}
+        {% endfor %}    
+        </span>
+    </li>
+    {% endif %}
+    
+</ul>

@@ -1,0 +1,14 @@
+columnSuffix: pfnrglpj
+contentColumnType: boolean
+fieldGroup: 343c118a-3a3b-450d-bad7-d715943511f0 # Common
+handle: lightswitch02
+instructions: null
+name: Lightswitch02
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

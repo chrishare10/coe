@@ -1,0 +1,58 @@
+<section class="section bg-{{ bgColor }}">
+    <div class="border-r-2 {% if textColor is defined and textColor is not null %}border-{{textColor}}{% endif %} absolute h-1/2 left-5 md:left-10 top-0"></div>
+
+    <div class="px-10 md:px-20 z-10 h-screen  py-20 md:pt-40">
+        <div class="flex flex-col md:flex-row gap-10 " >
+            <div class="w-full md:w-1/2 flex flex-col justify-start">
+                {% if colOneContent is defined and colOneContent is not null %}
+                
+                    {% set colorSelect = "text-" ~ textColor %}
+                    {% set borderSelect = "border-" ~ textColor %}
+                    {% set bgSelect = "bg-" ~ textColor %}
+
+                    {% set h1Classes = "font-header text-5xl md:text-6xl lg:text-7xl leading-none uppercase mb-5 " ~ colorSelect %}
+                    {% set h2Classes = "font-header text-4xl md:text-5xl lg:text-6xl leading-none uppercase mb-5 " ~ colorSelect %}
+                    {% set h3Classes = "font-sans font-semibold text-xl md:text-2xl lg:text-3xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h4Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                    {% set h5Classes = "font-sans font-semibold text-4xl md:text-5xl lg:text-6xl leading-none mb-5 " ~ colorSelect %}
+                    {% set pClasses = "font-sans font-semibold text-xl mb-5 leading-tight " ~ colorSelect %}
+                    {% set liClasses = "mb-7 border-t pl-10 pt-5 " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set strongClasses = "font-bold " ~ colorSelect %}
+                    {% set aFirstClasses = "btn-outline border-2 hover:text-black hover:" ~ bgSelect ~ " " ~ colorSelect ~ " " ~ borderSelect %}
+                    {% set aSecondClasses = "font-sans text-base hover:text-black ml-3 mb-2 " ~ colorSelect  %}
+                
+                    {{ colOneContent | retcon([
+                        ['attr', 'h1', { class: h1Classes }],
+                        ['attr', 'h2', { class: h2Classes }],
+                        ['attr', 'h3', { class: h3Classes }],
+                        ['attr', 'h4', { class: h4Classes }],
+                        ['attr', 'h5', { class: h5Classes }],
+                        ['attr', 'p', { class: pClasses }],
+                        ['attr', 'li', { class: liClasses }],
+                        ['attr', 'strong', { class: strongClasses }],
+                        ['attr', 'a[id="first"]', { class: aFirstClasses }],
+                        ['attr', 'a[id="second"]', { class: aSecondClasses }],
+
+                    ]) }}
+
+                
+                {% endif %}
+            </div>
+            
+            <div class="w-full md:w-1/2 flex flex-col items-center ">
+            {% if image is defined and image is not null %}
+                <div class="alpha-target relative w-full">
+                    <img class="absolute w-full h-full object-cover" src="{{ image.getUrl("large") }}">
+                </div>
+            {% endif %}
+            </div>
+        </div>
+        {% if loop.index == components|length %}
+
+        {% include 'components/_footer' %}
+
+        {% endif %}
+    </div>
+
+    
+</section>

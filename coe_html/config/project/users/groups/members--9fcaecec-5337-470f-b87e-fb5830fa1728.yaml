@@ -1,0 +1,5 @@
+description: ''
+handle: members
+name: Members
+permissions:
+  - accesscp

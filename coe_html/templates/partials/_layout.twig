@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+
+		{% if entry is defined %}
+			{% if entry.pageTitle|length %}
+				{% set title = entry.pageTitle %}
+			{% elseif pageTitle is defined %}
+				{% set title = pageTitle %}
+			{% else %}
+				{% set title = entry.title %}
+			{% endif %}
+
+			
+		{% elseif category is defined %} 
+			{% set entry = category %}
+
+			{% if entry.pageTitle|length %}
+				{% set title = entry.pageTitle %}
+			{% elseif pageTitle is defined %}
+				{% set title = pageTitle %}
+			{% else %}
+				{% set title = entry.title %}
+			{% endif %}
+		{% endif %}
+
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="theme-color" content=""/>
+		
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+
+		<meta name="og:title" content="{{ title }}"/>
+		<meta name="og:url" content="{{ entry.url }}"/>
+		
+		<meta name="og:image" content="{{ siteUrl }}assets/craft_img/Nominee-PreviewImage.png"/>
+		<meta name="og:image:width" content="1200"/>
+		<meta name="og:image:height" content="630"/>
+
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:site" content="{{ entry.url }}"/>
+		<meta name="twitter:title" content="{{ title }}"/>
+		
+		<meta name="twitter:image" content="{{ siteUrl }}assets/craft_img/Nominee-PreviewImage.png"/>
+
+		{% if entry.pageDescription is defined and entry.pageDescription is not null %}
+			<meta name="description" content="{{ entry.pageDescription }}"/>
+			<meta name="og:description" content="{{ entry.pageDescription }}"/>
+			<meta name="twitter:description" content="{{ entry.pageDescription }}"/>
+		{% else %}
+			<meta name="description" content="{{ title }}"/>
+			<meta name="og:description" content="{{ title }}"/>
+			<meta name="twitter:description" content="{{ title }}"/>
+		{% endif %}
+
+
+		<title>{{ title }}</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ siteUrl }}assets/static/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ siteUrl }}assets/static/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ siteUrl }}assets/static/favicon/favicon-16x16.png">
+		<link rel="manifest" href="{{ siteUrl }}assets/static/favicon/site.webmanifest">
+		<link rel="mask-icon" href="{{ siteUrl }}assets/static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="canonical" href="{{ entry.url }}">
+
+		
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+		
+		<link href="{{ siteUrl }}assets/css/external.css" rel="stylesheet"/> 
+		<link href="{{ siteUrl }}assets/css/style.css" rel="stylesheet"/>
+		{# <link href="{{ siteUrl }}assets/accordion/accord-style.css" rel="stylesheet"/> #}
+		
+
+		
+		
+	{% block head %}{% endblock %}
+
+		{% set current = craft.app.request.fullPath %}
+		{% set parent = current|split('/') %}
+		{% set parent = parent[0] %}
+
+		{% set currentPath = craft.app.request.pathInfo %}
+		
+
+	</head>
+	<body id="body" class="is-loading overflow-x-hidden">
+		
+		
+		
+		<div id="smooth-wrapper">
+    		<div id="smooth-content">
+				
+
+				<main id="main" class="{% if title %}{{ title }}{% endif %} relative "   >
+					<div id="newsletter-modal" class="absolute top-0 h-screen w-screen hidden justify-center items-center" style="z-index:1000; background: rgba(0,0,0,.5)">
+						<div class="w-full max-w-3xl relative">
+							<a href="#" id="modal-exit" class="absolute top-0 right-0 m-5">
+								<svg class="w-6" viewBox="0 0 43 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<line x1="1.29289" y1="40.2929" x2="40.2929" y2="1.29289" stroke="#0F3049" stroke-width="5"/>
+									<line x1="2.70711" y1="1.29289" x2="41.7071" y2="40.2929" stroke="#0F3049" stroke-width="5"/>
+								</svg>
+							</a>
+							<!-- Begin Mailchimp Signup Form -->
+							<div id="mc_embed_signup" class=" bg-white p-10">
+								<form action="https://myriadinsight.us6.list-manage.com/subscribe/post?u=54854a5157194bc011d7b1db7&amp;id=7e8a70e643&amp;f_id=00c22ee3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+									<div id="mc_embed_signup_scroll" class="flex flex-col gap-4">
+										<div class="indicates-required font-semibold text-black text-sm"><span class="asterisk">*</span> indicates required</div>
+										<div class="mc-field-group flex flex-col">
+											
+											<input type="email" value="" name="EMAIL" class="required email w-full py-2 mt-1 bg-transparent text-navy border-b-2 border-navy" id="mce-EMAIL" required>
+											<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+											<label for="mce-EMAIL" class="w-full font-sans font-semibold text-base text-navy mb-5">Email Address  <span class="asterisk">*</span>
+											</label>
+										</div>
+										<div class="mc-field-group flex flex-col">
+											
+											<input type="text" value="" name="FNAME" class="required w-full py-2 mt-1 bg-transparent text-navy border-b-2 border-navy" id="mce-FNAME" required>
+											<span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>
+											<label for="mce-FNAME" class="w-full font-sans font-semibold text-base text-navy mb-5">First Name  <span class="asterisk">*</span>
+											</label>
+										</div>
+										<div class="mc-field-group flex flex-col">
+											
+											<input type="text" value="" name="LNAME" class="required w-full py-2 mt-1 bg-transparent text-navy border-b-2 border-navy" id="mce-LNAME" required>
+											<span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>
+											<label for="mce-LNAME" class="w-full font-sans font-semibold text-base text-navy mb-5">Last Name  <span class="asterisk">*</span>
+											</label>
+										</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_54854a5157194bc011d7b1db7_7e8a70e643" tabindex="-1" value=""></div>
+									<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button pl-3 btn-outline border-2 hover:text-white hover:bg-navy text-navy border-navy"></div>
+									</div>
+								</form>
+								
+
+							</div>
+							<!--End mc_embed_signup-->
+						</div>
+
+					</div>
+					<div id="loading" class=" transition-all duration-300 absolute w-full h-full top-0 bg-navy opacity-100" style="z-index:1000"></div>
+					
+					
+					{% include "components/_header" %}
+					
+					{% block content %}
+						CRAFT IS NOT WORKING CORRECTLY. PLEASE REACH OUT TO YOUR SITE ADMINISTRATOR.
+					{% endblock %}
+
+					
+					
+					
+				</main>
+			
+						
+			</div>
+		</div>
+		{{ sprig.script }}
+		<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+		
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script>
+		
+		<script src="{{ siteUrl}}assets/gsap/SplitText.min.js"></script>
+		<script src="{{ siteUrl}}assets/gsap/ScrollSmoother.min.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.6.2/dist/smooth-scrollbar.min.js"></script>-->
+		<script src="https://unpkg.com/htmx.org@1.7.0"></script>
+		
+		
+
+		<script src="{{ siteUrl}}assets/js/external.js"></script>
+		<script src="{{ siteUrl}}assets/js/scripts-10.js"></script>
+		
+		
+		
+    
+	</body>
+	
+</html>
