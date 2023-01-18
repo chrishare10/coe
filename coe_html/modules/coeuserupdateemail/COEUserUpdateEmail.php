@@ -26,7 +26,7 @@ class COEUserUpdateEmail extends Module
                 // bail out if it's not a User being saved
                 if (!$e->element instanceof \craft\elements\User) { return; }
 
-                echo '<pre>'; print_r($e); echo '</pre>';
+                // echo '<pre>'; print_r($e); echo '</pre>';
 
                 // set variables for consumption by the template
                 $templateVars = ['user' => $e->element];
@@ -48,7 +48,7 @@ class COEUserUpdateEmail extends Module
                     ->setHtmlBody($htmlBody)
                     ->setTo('chris.hare@supergiant.agency');
 
-                // Craft::$app->getMailer()->send($message);
+                Craft::$app->getMailer()->send($message);
 
                 
             }
