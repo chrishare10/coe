@@ -1,0 +1,81 @@
+{
+  "name": "solspace/craft-express-forms",
+  "description": "Intuitive and lightweight form builder that gets the job done but doesn't get in your way.",
+  "version": "2.0.1",
+  "type": "craft-plugin",
+  "keywords": [
+    "forms",
+    "express",
+    "form builder",
+    "freeform"
+  ],
+  "authors": [
+    {
+      "name": "Solspace",
+      "homepage": "https://solspace.com"
+    }
+  ],
+  "support": {
+    "email": "support@solspace.com",
+    "issues": "https://github.com/solspace/craft-express-forms/issues?state=open",
+    "source": "https://github.com/solspace/craft-express-forms",
+    "docs": "https://docs.solspace.com/craft/express-forms/v2/"
+  },
+  "require": {
+    "craftcms/cms": "^4.0.0",
+    "solspace/craft3-commons": "^1.0.19",
+    "symfony/property-access": "^2.8|^3.0|^4.0|^5.0|^6.0",
+    "symfony/finder": "^2.8|^3.0|^4.0|^5.0|^6.0",
+    "symfony/yaml": "^3.0|^4.0|^5.0|^6.0",
+    "nesbot/carbon": "^1.22.1|^2.19",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3.0",
+    "friendsofphp/php-cs-fixer": "^3.4.0",
+    "brainmaestro/composer-git-hooks": "^2.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Solspace\\ExpressForms\\": "packages/plugin/src/",
+      "Solspace\\Tests\\ExpressForms\\": "packages/plugin/tests"
+    }
+  },
+  "scripts": {
+    "test:unit": "vendor/bin/phpunit --configuration ./phpunit.xml",
+    "fix": "vendor/bin/php-cs-fixer fix --diff",
+    "fix:dry-run": "vendor/bin/php-cs-fixer fix --dry-run --diff",
+    "cghooks": "vendor/bin/cghooks",
+    "post-install-cmd": "cghooks add --ignore-lock",
+    "post-update-cmd": "cghooks update"
+  },
+  "extra": {
+    "schemaVersion": "1.0.2",
+    "class": "Solspace\\ExpressForms\\ExpressForms",
+    "handle": "express-forms",
+    "name": "Express Forms",
+    "developer": "Solspace",
+    "developerUrl": "https://docs.solspace.com/",
+    "documentationUrl": "https://docs.solspace.com/craft/express-forms/v2/",
+    "changelogUrl": "https://raw.githubusercontent.com/solspace/craft-express-forms/master/CHANGELOG.md",
+    "hooks": {
+      "pre-commit": [
+        "set -e",
+        "npm -v",
+        "php -v",
+        "printf '\\n\\e[32m######### Linting Scripts #########\\e[0m\\n\\n'",
+        "npm run lint",
+        "printf '\\n\\e[32m######### Running Unit Tests #########\\e[0m\\n\\n'",
+        "composer run test:unit",
+        "printf '\\n\\e[32m######### Running CS Fixer dry run #########\\e[0m\\n\\n'",
+        "composer run fix:dry-run || (printf \"\\e[41mCS Fixer found issues\\e[0m\\n\" && exit 1)"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}

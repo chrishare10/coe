@@ -1,0 +1,56 @@
+{% extends "_layouts/cp" %}
+
+{% set title = form.name ?? "New Form"|t("express-forms") %}
+{% set selectedSubnavItem = "forms" %}
+
+{% set crumbs = [
+    { label: craft.expressforms.name, url: url("express-forms") },
+    { label: "Forms"|t("express-forms"), url: url("express-forms/forms") },
+] %}
+
+{% block actionButton %}
+    <div class="btngroup express-forms-save">
+        <input
+                type="submit"
+                class="btn submit"
+                id="xf-save"
+                value="{{ "Quick Save"|t('express-forms') }}"
+        />
+        <div class="btn submit menubtn" tabIndex={0} role="combobox"></div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a class="formsubmit" id="xf-save-finish">
+                        {{ "Save and finish"|t('express-forms') }}
+                    </a>
+                </li>
+                <li>
+                    <a class="formsubmit" id="xf-save-new">
+                        {{ "Save and add another"|t('express-forms') }}
+                    </a>
+                </li>
+                <li>
+                    <a class="formsubmit" id="xf-save-duplicate">
+                        {{ "Save as a new form"|t('express-forms') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+
+    <script>
+        var expressForm = {{ formJson|raw }};
+        var fileKinds = {{ fileKinds|json_encode|raw }};
+        var volumes = {{ volumes|json_encode|raw }};
+        var notifications = {{ notifications|json_encode|raw }};
+        var integrations = {{ integrations|json_encode|raw }};
+        var enhancedUi = {{ enhancedUi ? "true" : "false" }};
+        var isPro = {{ craft.expressforms.isPro ? "true" : "false" }};
+    </script>
+    <div id="builder-app"></div>
+
+{% endblock %}

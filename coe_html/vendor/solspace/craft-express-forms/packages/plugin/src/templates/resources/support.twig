@@ -1,0 +1,70 @@
+{% extends "express-forms/resources/_layout" %}
+
+{% set title = "Support"|t("express-forms") %}
+{% set crumbs = [
+    { label: craft.expressforms.name, url: url("express-forms") },
+    { label: "Resources"|t("express-forms"), url: url("express-forms/resources") },
+] %}
+
+{% block content %}
+
+    <p>
+        {{ "If you run into any issues or have any feature requests, check out the official support options below. We also appreciate any feedback you can provide us."|t("express-forms") }}
+    </p>
+
+    {% set items = [
+        {
+            handle: "support",
+            title: "Private Support",
+            description: "Need help with Express Forms or experiencing an issue? Feel free to send us a private support ticket.",
+            link: "https://docs.solspace.com/craft/express-forms/v2/support.html",
+            linkText: "Visit",
+        },
+        {
+            handle: "github",
+            title: "GitHub Issues",
+            description: "Visit our GitHub Issues page to check for existing issues or create new issue reports.",
+            link: "https://github.com/solspace/craft-express-forms/issues",
+            linkText: "Visit",
+        },
+        {
+            handle: "feedback",
+            title: "GitHub Discussion",
+            description: "Have any questions? Have any ideas you'd like to share? Visit our GitHub Discussions area!",
+            link: "https://github.com/solspace/craft-express-forms/discussions",
+            linkText: "Visit",
+        },
+        {
+            handle: "newsletter",
+            title: "Newsletter",
+            description: "Receive occasional (a few times a year) updates and tips about Express Forms and other Solspace software.",
+            link: "https://email.solspace.com/h/r/C18D151312EA98682540EF23F30FEDED",
+            linkText: "Subscribe",
+        },
+    ] %}
+
+    <ul class="cards" style="display: none">
+        {% for item in items %}
+            <li>
+                <div class="community-card">
+                    <div class="icon" id="{{ item.handle }}-icon"></div>
+                    <h3>
+                        <a href="{{ item.link }}" target="_blank">
+                            {{ item.title }}
+                        </a>
+                    </h3>
+                    <p class="description">
+                        {{ item.description|t('express-forms') }}
+                    </p>
+                </div>
+
+                <div class="card-footer centered">
+                    <a href="{{ item.link }}" class="btn submit" target="_blank">
+                        {{ item.linkText|t("express-forms") }}
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
